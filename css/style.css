@@ -25,9 +25,9 @@ body{
 
 #menu:hover ul{visibility: visible; opacity: 1}
 
-#menu ul {visibility: hidden; opacity: 0; ppadding-top: 1%; box-sizing: border-box; list-style-type: none; position: absolute;background: #fff; width: 20%;}
-#menu ul li{transition: 0.3s ease-in-out; border-left: 4px solid #fff; width: 100%; height: 40px; font-size: 14px;  line-height: 30px;}
-#menu ul li a{transition: 0.3s ease-in-out; display: block; text-decoration: none;  }
+#menu ul {transition: all 0.3s ease-in-out; visibility: hidden; opacity: 0; ppadding-top: 1%; box-sizing: border-box; list-style-type: none; position: absolute;background: #fff; width: 20%;  color: #3f5267;}
+#menu ul li{transition:all 0.3s ease-in-out; border-left: 4px solid #fff; width: 100%; height: 40px; font-size: 14px;  line-height: 30px;  color: #3f5267; }
+#menu ul li a{transition:all 0.3s ease-in-out; display: block; text-decoration: none;  }
 #menu ul li a i{width: 15%; text-align: center;}
 #menu ul li:hover{background: #74889e; border-left:4px solid #3f5267;}
 #menu ul li:hover a{color: #fff; padding-left: 5%;}
@@ -41,8 +41,32 @@ body{
 #head_cart a{text-decoration:none;color:#fff;font-size:24px;line-height:60px;}
 #head_cart a span{font-size:16px;}
 
-#head_login{width:10%;height:60px;float:left; box-sizing:border-box;border-right:1px solid rgba(0,0,0,0.2);}
-#head_login h4{cursor:pointer;color:#fff;text-align:center; line-height:60px;}
+
+#head_login:hover{background: #fff; color:#3f5267}
+#head_login{color: #fff; width:10%;height:60px;float:left; box-sizing:border-box;border-right:1px solid rgba(0,0,0,0.2);}
+#head_login h4{cursor:pointer;text-align:center; line-height:60px;}
+
+#head_login:hover form{visibility: visible; opacity: 1;}
+
+#head_login form{transition:all 0.3s ease-in-out; visibility: hidden; opacity: 0px; padding: 2%; box-sizing: border-box; position: absolute; background:#fff; width: 30%; margin-left: -20%;}
+
+
+#head_login form h3{margin-bottom: 0%; border-radius:100%; width: 100px; height: 100px; background: #3f5267; text-align: center; color: #fff; line-height: 100px; font-size: 30px;}
+#head_login form h4{color:#3f5267; font-weight: normal; font-size: 30px;}
+#head_login form h5{font-weight: normal; color: #3f5267; margin: 4% 0% 6% 0%; font-size: 14px; float: right; cursor: pointer;}
+
+#head_login form center button{transition: all 0.3s ease-in-out; cursor: pointer; color: #fff; width: 100%; height: 35px; outline: none; border-width: 0px; background: #3f5267; border-radius: 30px;}
+#head_login form center button:hover{border-radius: 0px;}
+
+
+#input_f{padding-left: 2%; box-sizing: border-box;; width: 100%; border-bottom: 3px solid #74889e; height: 40px; line-height: 40px; margin-bottom: 2%;}
+#input_f input{background: none; outline:none; border-width: 0px;}
+#input_f i{width: 10%; color: #3f5267}
+
+
+
+
+
 #head_signup{width:10%;height:60px;float:left; }
 #head_signup h4{cursor:pointer;color:#fff;text-align:center;line-height:60px;}
 

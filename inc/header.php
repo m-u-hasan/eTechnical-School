@@ -50,6 +50,26 @@
 
 	<div id = "head_login">
 		<h4><i class="far fa-user"></i> Login</h4>
+		<form method="post">
+			<center>
+			<h3><i class="fas fa-user"></i></h3>
+			<h4>Log In</h4>
+		</center>
+			<div id="input_f">
+				<i class="fas fa-lock"></i>
+				<input type="text" name="u_email" placeholder="Enter User Email"/>
+			</div>
+
+			<div id="input_f">
+				<i class="fas fa-lock"></i>
+				<input type="password" name="u_pass" placeholder="Enter User Password"/>
+			</div>
+ <h5>Forgot Password</h5><br clear="all"/>
+
+ <center><button type="button" name="button">Login</button>
+</center>
+	</form>
+
 	</div>
 
 	<div id = "head_signup">
