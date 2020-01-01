@@ -56,7 +56,7 @@
 			<h4>Log In</h4>
 		</center>
 			<div id="input_f">
-				<i class="fas fa-lock"></i>
+				<i class="fas fa-envelope"></i>
 				<input type="text" name="u_email" placeholder="Enter User Email"/>
 			</div>
 
@@ -66,13 +66,46 @@
 			</div>
  <h5>Forgot Password</h5><br clear="all"/>
 
- <center><button type="button" name="button">Login</button>
+ <center><button type="button" name="login">Login</button>
 </center>
 	</form>
 
 	</div>
-
+<!--Head SignUp-->
 	<div id = "head_signup">
 		<h4><i class="fas fa-user-plus"></i> SignUp</h4>
+		<form method="post">
+			<center>
+			<h3><i class="fas fa-user-plus"></i></h3>
+			<h4>Signup</h4>
+		</center>
+			<div id="input_f">
+				<i class="fas fa-user"></i>
+				<input type="text" name="s_name" placeholder="Enter Your Nmae"/>
+			</div>
+
+			<div id="input_f">
+				<i class="fas fa-envelope"></i>
+				<input type="text" name="s_email" placeholder="Enter Your Email"/>
+			</div>
+			<div id="input_f">
+				<i class="fas fa-phone"></i>
+				<input type="text" name="s_phn" placeholder="Enter Your Phone No."/>
+			</div>
+			<div id="input_f">
+				<i class="fas fa-lock"></i>
+				<input type="password" name="s_pass1" placeholder="Enter Your Password"/>
+			</div>
+			<div id="input_f">
+				<i class="fas fa-lock"></i>
+				<input type="password" name="s_pass2" placeholder="Re-Enter Your Password"/>
+			</div>
+
+
+	<center><button type="button" name="signup">SignUp</button>
+	</center>
+	</form>
+
+
 	</div>
 </div>
