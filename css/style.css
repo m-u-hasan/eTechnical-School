@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+*{margin:0px;padding:0px;font-family: 'Ubuntu', sans-serif;}
+body{
+	background:#e6e6e6;
+}
+
+#header{width:100%;height:90px;background:#3f5267;}
+#up_head{width:100%;height:30px;background:#74889e;}
+#link {width:33%;float:left;height:30px;}
+#link ul{list-style:none;margin-left:20%;}
+#link ul li{float:left;padding-left:2%;padding-right:2%;box-sizing:border-box;}
+#link ul li a{text-decoration:none;line-height:30px;color:#fff;font-size:12px;}
+#date {width:33%;float:left;height:30px;}
+#date p{color:#fff;font-size:14px;line-height:30px;text-align:center;}
+#slog {width:34%;float:left;height:30px;}
+#slog p{color:#fff; font-size:14px;line-height:30px;text-align:right;margin-right:20%;}
+
+#title{width:20%;height:60px;float:left;box-sizing:border-box;border-right:1px solid rgba(0,0,0,0.2);}
+#title h2 a {text-align:center; margin-left: 8%}
+#title h2 a {text-decoration:none;color:#fff;text-shadow:4px 4px 4px #000;line-height:60px;font-weight:normal;}
+
+#menu {color:#fff; width:5%;height:60px;float:left;box-sizing:border-box;border-right:1px solid rgba(0,0,0,0.2);}
+#menu h2{text-align:center;line-height:60px;cursor:pointer;}
+#menu:hover{background: #fff; color:#3f5267}
+
+
+#head_search{width:50%;height:60px;float:left; padding-left:1.7%;box-sizing:border-box;box-sizing:border-box;border-right:1px solid rgba(0,0,0,0.2);}
+#head_search form input{border-width:0px;  border-top-left-radius: 30px; border-bottom-left-radius: 30px;padding-left:5px;box-sizing:border-box;margin-top:2%;width:90%;height:35px;background:#fff;outline:none;}
+#head_search form button{border-width:0px;margin-left:-2%;border-top-right-radius: 30px; border-bottom-right-radius: 30px;box-sizing:border-box;margin-top:2%;width:8%;height:35px;background:#fff;outline:none;}
+
+#head_cart{text-align:center;width:5%;height:60px;float:left;box-sizing:border-box;border-right:1px solid rgba(0,0,0,0.2);}
+#head_cart a{text-decoration:none;color:#fff;font-size:24px;line-height:60px;}
+#head_cart a span{font-size:16px;}
+
+#head_login{width:10%;height:60px;float:left; box-sizing:border-box;border-right:1px solid rgba(0,0,0,0.2);}
+#head_login h4{cursor:pointer;color:#fff;text-align:center; line-height:60px;}
+#head_signup{width:10%;height:60px;float:left; }
+#head_signup h4{cursor:pointer;color:#fff;text-align:center;line-height:60px;}
+
+
+#slider{width:100%;height:500px;}
+#slider img{width:100%;height:500px;}
+
+
+
+
+<--Home-------------------->
+#home_cat {width:100%; padding: 3% 5% 5% 3%; box-sizing: border-box;  }
+#home_cat h2 {font-size: 30px; text-align: center; color: #3f5267; font-weight: normal; margin-top: 2%}
+#home_cat ul {list-style-type: none; margin-top: 2%; margin-bottom: 3%;}
+
+#home_cat ul li {transition: all 0.3s ease-in-out; margin-left: 2%;  margin-bottom: -1%; width: 18%; height: 200px; background:#fff; float: left}
+
+#home_cat ul li a {text-decoration: none}
+#home_cat ul li a i {text-align: center; color:#3f5267; font-size: 60px; margin-top: 20%; margin-bottom: 2%; padding-bottom: }
+
+#home_cat ul li a h4{margin-top: 4%; margin-bottom: 2%; color: #74889e }
+#home_cat ul li a p {color: #3f5267; margin-bottom: 15%;}
+
+#home_cat ul li:hover{background: #3f5267; border-radius: 100%;}
+#home_cat ul li:hover i{color: #74889e}
+#home_cat ul li:hover h4{color: #ffff};
+#home_cat ul li:hover p{color: #74889e};
+
+
+
+<!--top--course-->
+#top_course {margin-top:-4%; width:100%; padding: 0% 5% 5% 3%; box-sizing: border-box }
+#top_course h2 {font-size: 30px; text-align: center; color: #3f5267; font-weight: normal;}
+
+#top_course ul{list-style-type: none; margin-top: 3%}
+#top_course ul li {transition: all 0.3s ease-in-out; margin-left: 2% ; margin-bottom: 2%; width: 18%; height: 270px; background:#fff; float: left}
+
+
+#top_course ul li a {text-decoration: none}
+#top_course ul li a img{width: 5px; height: 150px;}
+
+#top_course ul li a h3{color: #74889e; font-size: 14px; margin-top:3%; font-weight: 400px; margin-left: 8px;}
+
+#top_course ul li a h4{margin-top: 4%; margin-bottom: 4%;  color: #3f5267; font-size: 18px; font-weight: normal; margin-left: 8px; }
+
+
+#top_course ul li a h5{color: #74889e; font-weight: normal; margin-left: 8px;}
+
+#top_course ul li:hover { transform: scale(1.1)}
+
+
+
+
+<!--Footer Section-->
+
+#footer ul li {width: 33%; float: left; padding-right: 5%; box-sizing: border-box; margin-top:45px}
+#footer ul li h2 {font-weight: normal; margin-bottom: 5%; margin-top: ; margin-left: 25px;   color: #1DA1F2;}
+#footer ul li span {color: #1DA1F2;}
+
+#footer ul li p{color: #74889e; line-height:22px; font-size: 18px; font-weight: normal; margin-left: 25px; text-align: justify; }
+#footer ul li table{width: 100%; margin-bottom: 5%;}
+#footer ul li table tr td{padding-bottom: 5%; color: #74889e}
+#footer ul li table tr td:nth-child(1){width: 10%;}
+#footer ul li table tr td i {color: #1DA1F2;}
+
+
+<!--Footer Section2-->
+#footer ul li textarea{border-radius: 3px; border-width: 0px; background: #74889e; outline: none; height: 150px; width: }
+
+
+#f_input{border-radius: 3px; font-size: 14px; width: 100%; height: 330px; background:#3f5267}
+#f_input i{width: 10%; color: #3f5267; text-align: center;}
+#f_input input {border-width: 0p; outline: none; height: 30px; margin-bottom: 8px; margin-top: 15px;}
+#f_infut input::-webkit-input-placeholder{color: #3f5267; !important}

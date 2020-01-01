@@ -1,0 +1,57 @@
+*{margin:0;padding:0;font-family:verdana;}
+#header{width:100%;height:60px;background:#3f5267;}
+
+#logo{width:20%; height:60px;float:left;}
+#logo h2 { text-align:center;line-height:60px;}
+#logo h2 a{text-decoration:none; color:#74889e;text-shadow:3px 3px 3px #000;}
+
+#title{width:60%; height:60px;float:left;}
+#title h2{color:#fff;text-align:center;text-shadow:3px 3px 3px #000;line-height:60px;}
+
+#link{width:20%; height:60px;float:left;}
+#link h3{text-align:center;line-height:60px;}
+#link h3 a {text-decoration:none;color:#fff;display:block;}
+#link h3:hover{background:#74889e;}
+
+#bodyleft{width:20%; height:595px; background:#3f5267;float:left;overflow-y:auto;font-weight:bold;}
+#bodyleft h3{ margin-bottom:2%;color:#fff;text-align:center;font-size:12px; background:#74889e;height:30px;line-height:30px;font-weight:bold;}
+#bodyleft ul {list-style:none;}
+#bodyleft ul li{width:95%;height:30px;line-height:30px;padding-left:5%;box-sizing:boder-box;}
+#bodyleft ul li a{ display:block;text-decoration:none;font-size:12px; color:#fff;} 
+#bodyleft ul li:hover{background:#fff;}
+#bodyleft ul li:hover a{color:#3f5267;} 
+
+#bodyright{width:80%; height:500px; background:#fff;float:left;overflow-y:auto;}
+#bodyright h3{ margin-bottom:2%;color:#fff;text-align:center;font-size:12px; background:#74889e;height:30px;line-height:30px;font-weight:normal;}
+
+#add {width:100%;padding:2%;box-sizing:boder-box;}
+#add details{width:60%;margin:auto;}
+#add details summary{ cursor:pointer;text-align:center; width:100%;height:30px;color:#3f5267;border:1px solid #3f5267;font-size:12px;line-height:30px;outline:none;} 
+#add details form {background:#74889e;box-sizing:boder-box;padding:3%;}
+#add details form input{width:100%;line-height:30px;font-size:12px;outline:none;box-sizing:boder-box;padding-left:2%;margin-bottom:1%;}
+#add details form select{width:100%;height:30px;font-size:12px;outline:none;box-sizing:boder-box;padding-left:2%;margin-bottom:1%;}
+#add details form textarea{width:100%;height:100px;font-size:12px;outline:none;box-sizing:boder-box;padding:2%;} 
+#add details form button{width:40%;height:30px;background:none;outline:none;border:1px solid #fff;color:#fff;font-size:12px;}
+#add details form button:hover{cursor:pointer;background:#fff;color:#3f5267;}
+#add table{width:100%; margin-top:2%;} 
+#add table tr th{height:35px;background:#3f5267;box-sizing:boder-box;color:#fff; text-align:left;padding-left:2%;font-size:12px;}    
+#add table tr td{color:#3f5267;height:30px;padding-left:2%;box-sizing:boder-box;font-size:14px;}
+
+#edit_form {width:50%;padding:2%;margin:auto;box-sizing:boder-box;}
+#edit_form input{width:100%;line-height:30px;font-size:12px;outline:none;box-sizing:boder-box;padding-left:2%;margin-bottom:1%;}
+#edit_form select{width:100%;line-height:30px;font-size:12px;outline:none;box-sizing:boder-box;padding-left:2%;margin-bottom:1%;}
+#edit_form button{cursor:pointer;width:40%;height:30px;background:#fff;outline:none;border:1px solid #3f5267;color:#3f5267;font-size:12px;}
+#edit_form button:hover{color:#fff;background:#3f5267;}
+
+
+#con{width:100%;}
+#con form table{width:70%;padding:5%;box-sizing:boder-box;margin:auto;}
+#con form table tr td{width:50%;height:35px;font-size:12px;}
+#con form table tr td input{border:1px solid #3f5267;border-radius:3px; width:100%;height:25px;outline:none;padding-left:2%;}
+#con form button{cursor:pointer;width:20%;height:35px;border: 1px solid #3f5267;background:none;outline:none;}
+#con form button:hover{background:#3f5267;color:#fff;}
+
+#about{width:60%;margin:auto;}
+#about textarea{width:100%;height:150px;padding:1%;box-sizing:boder-box;}
+#about center button{cursor:pointer;height:35px;width:30%;margin-top:5px;border: 1px solid #3f5267;background:none;}
+#about center button:hover{background:#3f5267;color:#fff;}
