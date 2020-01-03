@@ -93,11 +93,11 @@ body{
 
 
 <--Home-------------------->
-#home_cat {width:100%; padding: 3% 5% 5% 3%; box-sizing: border-box;  }
+#home_cat { width:100%; padding: 3% 5% 5% 3%; }
 #home_cat h2 {font-size: 30px; text-align: center; color: #3f5267; font-weight: normal; margin-top: 2%}
-#home_cat ul {list-style-type: none; margin-top: 2%; margin-bottom: 3%;}
+#home_cat ul {list-style-type: none; margin-top: 2%; margin-bottom: 3%; overflow-y: auto; height: 400px;}
 
-#home_cat ul li {transition: all 0.3s ease-in-out; margin-left: 2%;  margin-bottom: -1%; width: 18%; height: 200px; background:#fff; float: left}
+#home_cat ul li {transition: all 0.3s ease-in-out; margin-left: 2%;  margin-bottom: 2%; width: 18%; height: 200px; background:#fff; float: left}
 
 #home_cat ul li a {text-decoration: none}
 #home_cat ul li a i {text-align: center; color:#3f5267; font-size: 60px; margin-top: 20%; margin-bottom: 2%; padding-bottom: }
@@ -137,22 +137,24 @@ body{
 
 <!--Footer Section-->
 
-#footer ul li {width: 33%; float: left; padding-right: 5%; box-sizing: border-box; margin-top:45px}
-#footer ul li h2 {font-weight: normal; margin-bottom: 5%; margin-top: ; margin-left: 25px;   color: #1DA1F2;}
-#footer ul li span {color: #1DA1F2;}
+#footerProblem{width:100%;height:0px;}
 
-#footer ul li p{color: #74889e; line-height:22px; font-size: 18px; font-weight: normal; margin-left: 25px; text-align: justify; }
-#footer ul li table{width: 100%; margin-bottom: 5%;}
-#footer ul li table tr td{padding-bottom: 5%; color: #74889e}
-#footer ul li table tr td:nth-child(1){width: 10%;}
-#footer ul li table tr td i {color: #1DA1F2;}
+#footer{width:100%;padding:3% 5% 5% 5%;box-sizing:border-box;background:#3f5267;}
+#footer ul{list-style-type:none;}
+#footer ul li{width:33%;float:left;padding-right:5%;box-sizing:border-box;}
+#footer ul li h2{color:#fff;font-weight:normal;margin-bottom:10%;}
+#footer ul li p{color:#74889e;line-height:20px;font-weight:normal;}
+#footer ul li table{width:100%;margin-bottom:5%;}
+#footer ul li table td{padding-bottom:5%;color:#74889e;}
+#footer ul li table td:nth-child(1){width:10%;}
+#footer ul li table tr td i{margin-right:5%;color:#1DA1F2;}
 
+#footer ul li textarea{resize:none;width:100%;height:100px;background:#74889e;border-radius:3px;padding:3%;box-sizing:border-box;margin-bottom:5px;font-size:14px;outline:none;border-width:0px;}
+#f_input textarea::webkit-input-placeholder{color: #0bf;!important}
+#footer ul li button{width:40%;height:30px;border-radius:3px;float:right;background:#74889e;border-width:0px;outline:none;color:#fff;cursor:pointer;}
+#footer ul li button:hover{background:#fff;color:#3f5267;}
 
-<!--Footer Section2-->
-#footer ul li textarea{border-radius: 3px; border-width: 0px; background: #74889e; outline: none; height: 150px; width: }
-
-
-#f_input{border-radius: 3px; font-size: 14px; width: 100%; height: 330px; background:#3f5267}
-#f_input i{width: 10%; color: #3f5267; text-align: center;}
-#f_input input {border-width: 0p; outline: none; height: 30px; margin-bottom: 8px; margin-top: 15px;}
-#f_infut input::-webkit-input-placeholder{color: #3f5267; !important}
+#f_input{border-radius:3px;font-size:14px;padding-left:5px;width:100%;height:30px;background:#74889e;margin-bottom:5px;}
+#f_input i{width:10%;color:#3f5267;text-align:center;}
+#f_input input{border-width:0px;background:none;outline:none;height:30px;width:88%;}
+#f_input input::webkit-input-placeholder{color: #0bf;!important}

@@ -1,18 +1,14 @@
+<?php include("inc/function.php"); ?>
 <div id="header">
 	<div id="up_head">
 		<div id="link">
-			<ul>
-				<li><a href='https://www.facebook.com'><i class="fab fa-facebook"></i></a></li>
-				<li><a href='https://www.youtube.com'><i class='fab fa-youtube'></i></a></li>
-				<li><a href='https://www.twitter.com'><i class='fab fa-twitter'></i></a></li>
-				<li><a href='https://www.linkedin.com'><i class='fab fa-linkedin'></i></a></li>
-				<li><a href='https://www.googleplus.com'><i class='fab fa-google-plus'></i></a></li>
-
-			</ul>
+		
+			<?php 	echo head_link(); ?>
+			
 		</div>
 
 		<div id="date">
-			<p><?php echo date('l , d F Y'); ?></p>
+			<p><?php echo date('l,d F Y'); ?></p>
 		</div>
 
 		<div id="slog">
@@ -29,9 +25,7 @@
 		<h2><i class="fas fa-bars"></i></h2>
 		<?php
 		 include("inc/cat_menu.php");
-
 		?>
-
 	</div>
 
 	<div id = "head_search">
@@ -40,8 +34,6 @@
 			<button name="search"><i class="fas fa-search"></i></button>
 
 		</form>
-
-
 	</div>
 
 	<div id = "head_cart">
