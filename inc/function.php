@@ -53,5 +53,30 @@
 		endwhile;
 
 	}
+<<<<<<< HEAD
+	
+	function cart(){
+		include("inc/db.php");
+		echo "
+		<div id='wrap'>
+			
+			<div id='crumb'>
+				<span><a href='index.php'>Home</a></span> <b>></b>
+				<span>My Cart</span>							
+			</div>
+			
+			<div id ='cart'>
+				
+			
+			</div>
+		</div>
+		";
+	}
+	
+	
+	
+?>
+=======
 
 ?>
+>>>>>>> aece75fd67c7cf4e3775f4da41434618c2f363f9
