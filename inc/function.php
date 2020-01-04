@@ -52,9 +52,7 @@
 			";
 		endwhile;
 
-	}
-<<<<<<< HEAD
-	
+	}	
 	function cart(){
 		include("inc/db.php");
 		echo "
@@ -73,10 +71,5 @@
 		";
 	}
 	
-	
-	
 ?>
-=======
 
-?>
->>>>>>> aece75fd67c7cf4e3775f4da41434618c2f363f9
