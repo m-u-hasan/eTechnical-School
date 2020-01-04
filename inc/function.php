@@ -54,4 +54,24 @@
 		
 	}
 	
+	function cart(){
+		include("inc/db.php");
+		echo "
+		<div id='wrap'>
+			
+			<div id='crumb'>
+				<span><a href='index.php'>Home</a></span> <b>></b>
+				<span>My Cart</span>							
+			</div>
+			
+			<div id ='cart'>
+				
+			
+			</div>
+		</div>
+		";
+	}
+	
+	
+	
 ?>
