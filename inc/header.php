@@ -2,9 +2,9 @@
 <div id="header">
 	<div id="up_head">
 		<div id="link">
-		
+
 			<?php 	echo head_link(); ?>
-			
+
 		</div>
 
 		<div id="date">
@@ -18,7 +18,7 @@
 	</div>
 
 	<div id = "title">
-		<h2><a href="index.php">eTechnicalSchool</a></h2>
+		<h2><a href="index.php">eTechnical  School</a></h2>
 	</div>
 
 	<div id = "menu">
