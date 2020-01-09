@@ -64,7 +64,24 @@
 			</div>
 			
 			<div id ='cart'>
-				
+					
+					<table cellspacing='0'>
+						<tr>
+							<th>Name</th>	
+							<th>Instructor</th>
+							<th>Language</th>
+							<th>Lectures</th>
+							<th>Price</th>							
+						</tr>
+						<tr>
+							<td>
+							<img src='imgs/courses/html.jpg'>
+							<span><a href='#'>Html Course</a></span>
+							<b><a href='#'>Remove</a></b>
+							</td>
+							
+						</tr>
+					</table>
 			
 			</div>
 		</div>
