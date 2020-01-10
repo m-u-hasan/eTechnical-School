@@ -73,8 +73,20 @@
 		</center>
 			<div id="input_f">
 				<i class="fas fa-user"></i>
+<<<<<<< HEAD
 				<input type="text" name="name" placeholder="Enter Your Nmae"/>
+=======
+				<input type="text" name="s_name" placeholder="First Name"/>
+>>>>>>> 36d3033b3847909b8b82447eb7c2dc81123d0770
 			</div>
+
+			<div id="input_f">
+				<i class="fas fa-user"></i>
+				<input type="text" name="s_name" placeholder="Last Nmae"/>
+			</div>
+
+
+
 
 			<div id="input_f">
 				<i class="fas fa-envelope"></i>
