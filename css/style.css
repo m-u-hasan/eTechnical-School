@@ -87,17 +87,24 @@ body{
 #head_signup form center button:hover{border-radius: 0px;}
 
 
-#cart{width:96%;padding:2%;background:#fff;box-sizing:border-box;margin:2% 2% 2% 2%;}
+#cart_f{width: 60%;}
+#cart{width:96%;padding:2%;background:#fff;box-sizing:border-box;margin:2% 2% 1% 2%;}
 #cart table{width:100%;}
-#cart table tr th{text-align:left;padding-left:2%;box-sizing:border-box;height:35px;background:#3d5267;color:#fff;}
-#cart table tr td{padding:1% 0% 1% 0%;box-sizing:border-box;}
-#cart table tr td img {height:60px;width:80px;float:left;margin-right:2%;}
-#cart table tr td span{float:left;width:88%;}
-#cart table tr td span a{text-decoration:none;color:#3f5267;font-size:14px;}
+#cart table tr th{text-align:left; padding-left:1%; ppadding-right: 4%; font-size: 20px; box-sizing:border-box;height:35px;background:#3d5267;color:#fff; ;}
+#cart table tr td{border-bottom: 2px solid rgba(0,0,0,0.2); padding:1% 0% 1% 0%;box-sizing:border-box; font-size: 20px;}
+#cart table tr td img {height:80px;width:150px;float:left;margin-right:2%;}
+#cart table tr td span{float:left; width:88%;}
+#cart table tr td span a{text-decoration:none; color:#3f5267; font-size:30px;}
 #cart table tr td span a:hover{text-decoration:underline;}
-#cart table tr td b{font-weight:normal;float:left;font-size:12px;}
-#cart table tr td b a{text-decoration:none;color:#f00;}
+#cart table tr td b{font-weight:normal; font-size:20px; float: left; margin-top: 2%; margin-right: 200px;}
+#cart table tr td b a{text-decoration:none;color:#f00; }
 #cart table tr td b a:hover{text-decoration:underline;}
+#cart table tr td button{ transition: all 0.3s ease-in-out; width: 40%; height: 35px; background: #3f5267; border-width:0px; outline: none; color: #fff; border-radius: 30px; cursor: pointer;}
+
+#cart table tr td button a{display: block; text-decoration: none; color: #fff;}
+#cart table tr td button:hover{border-radius: 0px;}
+
+
 #crumb{width:96%;box-shadow:0px 0px 20px #ccc;height:35px;line-height:35px;padding:0% 1% 1% 1;background:#fff;box-sizing:border-box;margin:0% 2.5% 2% 2%;}
 #crumb span{color:#74889e;margin-right:0.2%;margin-left:0.5%;}
 #crumb span a{text-decoration:none;color:#06f;}

@@ -43,7 +43,7 @@
 			<li>
 				<a href='#'>
 				<center>
-	      ".$row['cat_icon']." 
+	      ".$row['cat_icon']."
 				<h4>".$row['cata_name']." </h4>
 				<p>2</p>
 				</center>
@@ -52,26 +52,26 @@
 			";
 		endwhile;
 
-	}	
+	}
 	function cart(){
 		include("inc/db.php");
 		echo "
 		<div id='wrap'>
-			
+
 			<div id='crumb'>
 				<span><a href='index.php'>Home</a></span> <b>></b>
-				<span>My Cart</span>							
+				<span>My Cart</span>
 			</div>
-			
+
 			<div id ='cart'>
-					
+
 					<table cellspacing='0'>
 						<tr>
-							<th>Name</th>	
+							<th id='cart_f'>Name</th>
 							<th>Instructor</th>
 							<th>Language</th>
 							<th>Lectures</th>
-							<th>Price</th>							
+							<th>Price</th>
 						</tr>
 						<tr>
 							<td>
@@ -79,14 +79,61 @@
 							<span><a href='#'>Html Course</a></span>
 							<b><a href='#'>Remove</a></b>
 							</td>
-							
+						<td>Mahamud</td>
+							<td>Bangla</td>
+								<td>100</td>
+									<td>3000/=</td>
+
+
 						</tr>
+
+
+
+						<tr>
+							<td>
+							<img src='imgs/courses/cart1.jpg'>
+							<span><a href='#'>Programming And Development</a></span>
+							<b><a href='#'>Remove</a></b>
+							</td>
+						<td >Sabbir Hossain</td>
+							<td>Bangla</td>
+								<td>100</td>
+									<td>3000/=</td>
+
+
+						</tr>
+
+
+
+						<tr>
+							<td id='cart_f'>
+							<img src='imgs/courses/cart2.jpg'>
+							<span><a href='#'>SEO and Digital Marketing</a></span>
+							<b><a href='#'>Remove</a></b>
+							</td>
+						<td>Tamjid </td>
+							<td>Bangla</td>
+								<td>100</td>
+									<td>3000/=</td>
+
+
+						</tr>
+
+						<tr>
+							<td>
+								<button style='font-size: 20px;'><a href= 'index.php'>Keep Shopping</a></button>
+								<button style='font-size: 20px;'><a href ='#'>Checkout</a></button>
+							</td>
+							<td></td><td></td>
+							<td>Ammount Payble: </td>
+							<td>9000/=</td>
+						</tr>
+
 					</table>
-			
+
 			</div>
 		</div>
 		";
 	}
-	
-?>
 
+?>
