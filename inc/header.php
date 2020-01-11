@@ -1,10 +1,12 @@
-<?php include("inc/function.php"); ?>
+<?php 
+	include("function.php");
+	include("db.php");
+	session_start();
+?>
 <div id="header">
 	<div id="up_head">
 		<div id="link">
-
 			<?php 	echo head_link(); ?>
-
 		</div>
 
 		<div id="date">
@@ -14,7 +16,6 @@
 		<div id="slog">
 			<p>Bangladesh's No.1 E Learning Website </p>
 		</div>
-
 	</div>
 
 	<div id = "title">
@@ -24,7 +25,7 @@
 	<div id = "menu">
 		<h2><i class="fas fa-bars"></i></h2>
 		<?php
-		 include("inc/cat_menu.php");
+		 include("cat_menu.php");
 		?>
 	</div>
 
@@ -63,6 +64,8 @@
 	</form>
 
 	</div>
+
+
 <!--Head SignUp-->
 	<div id = "head_signup">
 		<h4><i class="fas fa-user-plus"></i> SignUp</h4>
@@ -73,21 +76,13 @@
 		</center>
 			<div id="input_f">
 				<i class="fas fa-user"></i>
-<<<<<<< HEAD
-				<input type="text" name="name" placeholder="Enter Your Nmae"/>
-=======
-				<input type="text" name="s_name" placeholder="First Name"/>
->>>>>>> 36d3033b3847909b8b82447eb7c2dc81123d0770
+				<input type="text" name="firstname" placeholder="First Name"/>
 			</div>
 
 			<div id="input_f">
 				<i class="fas fa-user"></i>
-				<input type="text" name="s_name" placeholder="Last Nmae"/>
+				<input type="text" name="lastname" placeholder="Last Nmae"/>
 			</div>
-
-
-
-
 			<div id="input_f">
 				<i class="fas fa-envelope"></i>
 				<input type="text" name="email" placeholder="Enter Your Email" title="Please enter your email" required />
@@ -111,15 +106,16 @@
 	</div>
 </div>
 
-<?php
-		include("db.php");
+//signup Function
+<?php		
 		if(isset($_POST['signup'])){
-			$name = $_POST['name'];
+			$firstname = $_POST['firstname'];
+			$lastname = $_POST['lastname'];
 			$email = $_POST['email'];
 			$phone = $_POST['phone'];
 			$pass1 = $_POST['pass1'];
 			$pass2 = $_POST['pass2'];
-			
+
 			if($email && $pass1 && $pass2){
 				if($pass1 == $pass2)
 				{
@@ -133,8 +129,8 @@
 					}
 					else
 					{
-						$add_user = $con->prepare("insert into user(email,pass,name,phone)values('$email','$pass1','$name','$phone')");
-						
+						$add_user = $con->prepare("insert into user(email,pass,firstname,lastname,phone)values('$email','$pass1','$firstname','$lastname','$phone')");
+
 						if($add_user->execute()){
 							echo"<script>alert('Registration successful')</script>";
 							echo"<script>window.open('index.php','_self')</script>";
@@ -144,7 +140,7 @@
 							echo"<script>window.open('index.php','_self')</script>";
 						}
 					}
-					
+
 				}
 				else
 				{
@@ -155,37 +151,33 @@
 				echo"<script>alert('Please enter all input')</script>";
 			}
 		}
+
+		//login Function
 		if(isset($_POST['login'])){			
 			$email =$_POST['u_email'];
 			$pass = $_POST['u_pass'];
-			
 			$get_cata = $con->prepare("select * from user where email='$email' AND pass='$pass'");
 			$get_cata->setFetchMode(PDO::FETCH_ASSOC);
 			$get_cata->execute();
 			$row=$get_cata->fetch();
 			if($row['role']=='Admin')
 			{
-				echo "<script> alert('Admin Log in successful')</script>";
-				echo"<script>window.open('index.php','_self')</script>";
-				
+				echo"<script>window.open('./admin/index.php','_self')</script>";
 			}
 			else
 			{
 				if($row['role']=='user')
 				{
-					echo "<script> alert('User Log in successful')</script>";
-					echo"<script>window.open('index.php','_self')</script>";
+				//	$_SESSION['user_firstName'] = $row['firstname'];
+				
+					echo"<script>location.href='userlogin.php'</script>";
 				}
 				else{
 					echo "<script> alert('Password or Email is wrong')</script>";
 					echo"<script>window.open('index.php','_self')</script>";
 				}
-				
+
 			}
-			
+
 		}
 ?>
-
- 
- 
-	

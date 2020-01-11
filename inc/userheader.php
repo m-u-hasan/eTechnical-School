@@ -1,4 +1,8 @@
-<?php include("inc/function.php"); ?>
+<?php
+	include("function.php");
+	include("db.php");
+	session_start();
+?>
 <div id="header">
 	<div id="up_head">
 		<div id="link">
@@ -18,7 +22,7 @@
 	</div>
 
 	<div id = "title">
-		<h2><a href="index.php">eTechnical  School</a></h2>
+		<h2><a href="userlogin.php">eTechnical  School</a></h2>
 	</div>
 
 	<div id = "menu">
@@ -45,29 +49,35 @@
 
 				<h4><i class="fas fa-upload"></i>Upload</h4>
 
-
 	</div>
-
 
 	<!--User Profile-->
 		<div id = "head_login">
-			<h4><i class="far fa-user"></i> User</h4>
-			<form method="post">
+				<h4><i class="far fa-user"></i>
+					Name
+		 </h4>
+				<form method="post">
+							<div id="input_f">
+								<h4>
+									My Profile
+							 </h4>
+							</div>
 
-				<div id="input_f">
-
-					<h4>My Profile</h4>
-				</div>
-
-				<div id="input_f">
-					<h4>Setting</h4>
-				</div>
-
-
-	 <center><button type="button" name="logout">logout</button>
-	</center>
-		</form>
-
+							<div id="input_f">
+								<h4>Setting</h4>
+							</div>
+				 			<center><button type="submit" name="logout">logout</button>
+							</center>
+			</form>
 		</div>
-
 </div>
+
+
+
+//Logout php code
+<?php
+if(isset($_POST['logout'])){
+	session_unset();
+	echo"<script>window.open('index.php','_self')</script>";
+}
+ ?>
