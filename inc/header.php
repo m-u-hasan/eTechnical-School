@@ -6,7 +6,6 @@
 	session_start();
 	$_SESSION['email'];
 	$_SESSION['pass'];
-
 ?>
 
 
@@ -147,8 +146,15 @@
 						$add_user = $con->prepare("insert into user(email,pass,firstname,lastname,phone)values('$email','$pass1','$firstname','$lastname','$phone')");
 
 						if($add_user->execute()){
-							echo"<script>alert('Registration successful')</script>";
-							echo"<script>window.open('index.php','_self')</script>";
+							
+							$_SESSION['email']=$email;
+							$_SESSION['pass']=$pass1;
+							$_SESSION['name'] = $firstname;
+							if($_SESSION['email'] && $_SESSION['pass']){
+								echo"<script>alert('Registration successful')</script>";
+								echo "<script>location.href='userlogin.php'</script>";
+							}							
+							//echo"<script>window.open('index.php','_self')</script>";-->
 						}
 						else{
 							echo"<script>alert('Registration Failed')</script>";
@@ -192,8 +198,7 @@
 			{
 				if($row['role']=='user')
 				{
-				//	$_SESSION['user_firstName'] = $row['firstname'];
-				
+					$_SESSION['name'] = $row['firstname'];		
 					echo"<script>location.href='userlogin.php'</script>";
 				}
 				else{
