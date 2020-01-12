@@ -1,4 +1,4 @@
-<?php 
+<?php
 		include("inc/db.php");
 		if(isset($_POST['signup'])){
 			$name = $_POST['name'];
@@ -7,7 +7,7 @@
 			$pass1 = $_POST['pass1'];
 			$pass1 = $_POST['pass1'];
 			$pass2 = $_POST['pass2'];
-			
+
 			if($email && $pass1 && $pass2){
 				if($pass1 == $pass2)
 				{
@@ -22,17 +22,17 @@
 					else
 					{
 						$add_user = $con->prepare("insert into user(email,pass,name,phone)values('$email','$pass','$name','$phone')");
-						
+
 						if($add_user->execute()){
 							echo"<script>alert('Registration successful')</script>";
-							echo"<script>window.open('index.php','_self')</script>";
+							echo"<script>window.open('../userlogin.php','_self')</script>";
 						}
 						else{
 							echo"<script>alert('Registration Failed')</script>";
 							echo"<script>window.open('index.php','_self')</script>";
 						}
 					}
-					
+
 				}
 				else
 				{
@@ -42,5 +42,5 @@
 				echo"<script>alert('Please enter all input')</script>";
 			}
 		}
-	
+
 ?>
