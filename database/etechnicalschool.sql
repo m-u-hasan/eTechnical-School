@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 12, 2020 at 05:32 PM
+-- Generation Time: Jan 12, 2020 at 09:06 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.1.33
 
@@ -189,6 +189,30 @@ INSERT INTO `term` (`t_id`, `term`, `for_whom`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `upload`
+--
+
+CREATE TABLE `upload` (
+  `id` int(100) NOT NULL,
+  `c_title` varchar(200) NOT NULL,
+  `price` int(10) NOT NULL,
+  `t_name` varchar(100) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `video` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `upload`
+--
+
+INSERT INTO `upload` (`id`, `c_title`, `price`, `t_name`, `image`, `video`) VALUES
+(1, '', 5000, 'Hasan', 'IMG_20190205_135623.jpg', '5.jpg'),
+(2, '', 5000, 'Hasan', 'IMG_20190205_135623.jpg', '5.jpg'),
+(3, '', 10000, 'Sabbir', 'top_course1.jpg', 'top_course3.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -216,7 +240,14 @@ INSERT INTO `user` (`u_id`, `email`, `pass`, `firstname`, `lastname`, `phone`, `
 (9, 'saifult@gamil.com', '12345', 'Saiful', ' Isalm', 1826559551, 'user'),
 (10, 'tanvirhossain@gmail.com', '12345', 'Tanvir', ' Hossain', 1632394279, 'user'),
 (12, 'karim@gmail.com', '12345', 'Karim', 'Ullah', 1782426382, 'user'),
-(13, 'tamgid@gamil.com', '12345', 'Tamgid', 'Islam', 1782426382, 'user');
+(13, 'tamgid@gamil.com', '12345', 'Tamgid', 'Islam', 1782426382, 'user'),
+(14, 'rahim@gmail.com', '12345', 'Rahim', 'Uddin', 1826559551, 'user'),
+(15, 'abutaher@gmail.com', '12345', 'Abu ', 'Taher', 344342343, 'user'),
+(16, 'faysal@gmail.com', '12345', 'Faysal', 'Islam', 1123243434, 'user'),
+(17, 'hamidul@gamil.com', '12345', 'Hamidul', 'Islam', 43423423, 'user'),
+(18, 'mamun@gmail.com', '12345', 'Mamun', 'Biswash', 1211212454, 'user'),
+(19, 'tarik@gmail.com', '12345', 'Tarik', 'Isalm', 2147483647, 'user'),
+(20, 'akbar@gmail.com', '12', 'akbar', 'Hossain', 2147483647, 'user');
 
 --
 -- Indexes for dumped tables
@@ -257,6 +288,12 @@ ALTER TABLE `sub_cata`
 --
 ALTER TABLE `term`
   ADD PRIMARY KEY (`t_id`);
+
+--
+-- Indexes for table `upload`
+--
+ALTER TABLE `upload`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user`
@@ -305,10 +342,16 @@ ALTER TABLE `term`
   MODIFY `t_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `upload`
+--
+ALTER TABLE `upload`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `u_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `u_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
