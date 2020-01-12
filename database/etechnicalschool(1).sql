@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2020 at 04:39 AM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: Jan 12, 2020 at 05:32 PM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -163,10 +163,7 @@ INSERT INTO `sub_cata` (`sub_cata_id`, `sub_cata_name`, `cata_id`) VALUES
 (30, 'Science', 13),
 (31, 'Digital Photography', 14),
 (32, 'Painting', 14),
-(33, 'Camera Guide', 14),
-(34, 'Music Software', 15),
-(35, 'Guiter', 15),
-(36, 'Music Composition', 15);
+(33, 'Camera Guide', 14);
 
 -- --------------------------------------------------------
 
@@ -198,8 +195,28 @@ INSERT INTO `term` (`t_id`, `term`, `for_whom`) VALUES
 CREATE TABLE `user` (
   `u_id` int(100) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `pass` varchar(20) NOT NULL
+  `pass` varchar(20) NOT NULL,
+  `firstname` varchar(100) DEFAULT NULL,
+  `lastname` varchar(100) NOT NULL,
+  `phone` int(20) NOT NULL,
+  `role` varchar(10) NOT NULL DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`u_id`, `email`, `pass`, `firstname`, `lastname`, `phone`, `role`) VALUES
+(1, 'hasan.cse.duet@gmail.com', '12345', 'Mahamud', 'ul-Hasan', 1839786366, 'Admin'),
+(2, 'sabbir.cse.duet@gmail.com', '13579', 'Sabbir', 'Hossain', 1826559551, 'Admin'),
+(3, 'imranmolla@gmail.com', '12345', 'Imran', ' Molla', 1782426382, 'user'),
+(6, 'hanif@gamil.com', '12345', 'Hanif', ' Hasan', 1826559551, 'user'),
+(7, 'robin@gmail.com', '12345', 'Robin', ' Shek', 1826559551, 'user'),
+(8, 'anikkumar@gmail.com', '12345', 'Anik', ' Kumar', 1826559551, 'user'),
+(9, 'saifult@gamil.com', '12345', 'Saiful', ' Isalm', 1826559551, 'user'),
+(10, 'tanvirhossain@gmail.com', '12345', 'Tanvir', ' Hossain', 1632394279, 'user'),
+(12, 'karim@gmail.com', '12345', 'Karim', 'Ullah', 1782426382, 'user'),
+(13, 'tamgid@gamil.com', '12345', 'Tamgid', 'Islam', 1782426382, 'user');
 
 --
 -- Indexes for dumped tables
@@ -291,7 +308,7 @@ ALTER TABLE `term`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `u_id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `u_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
