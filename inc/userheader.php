@@ -4,6 +4,7 @@
 	session_start();
 	if(isset($_POST['logout'])){
 	session_unset();
+	session_destroy();
 	echo"<script>window.open('index.php','_self')</script>";
 }
 ?>
@@ -64,7 +65,9 @@
 	<!--User Profile-->
 		<div id = "head_login">
 				<h4><i class="far fa-user"></i>
-					Name
+				<?php 					
+					echo $_SESSION['name'];
+				?>
 		 </h4>
 				<form method="post">
 							<div id="input_f">
