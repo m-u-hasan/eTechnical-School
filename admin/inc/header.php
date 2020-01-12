@@ -1,4 +1,13 @@
-<?php include("inc/function.php"); ?>
+<?php
+session_start();
+include("inc/function.php");
+if(isset($_POST['Logout']))
+{
+	session_unset();
+	session_destroy();
+	echo"<script>alert('Logout Ok')</script>";
+}
+?>
 
 <div id = "header">
 	<div id = "logo">
@@ -11,7 +20,10 @@
 	</div>
 		
 	<div id = "link">
-		<h3><a href='#'>Logout</a></h3>
+		<h3>
+			<!--<a href="">Logout</a>-->
+			<input type='submit' name='Logout' value='Logout'>
+		</h3>	
 	</div>
 	
 

@@ -2,29 +2,39 @@
 	include("function.php");
 	include("db.php");
 	session_start();
+	if(isset($_POST['logout'])){
+	session_unset();
+	echo"<script>window.open('index.php','_self')</script>";
+}
 ?>
+
+
 <div id="header">
-	<div id="up_head">
-		<div id="link">
+		<div id="up_head">
+		
+		<!--eTechnicalsholl Section-->
+			<div id="link">
+				<?php 	echo head_link(); ?>
+			</div>
 
-			<?php 	echo head_link(); ?>
+		<!--date show section-->
+			<div id="date">
+				<p><?php echo date('l,d F Y'); ?></p>
+			</div>
 
-		</div>
-
-		<div id="date">
-			<p><?php echo date('l,d F Y'); ?></p>
-		</div>
-
-		<div id="slog">
-			<p>Bangladesh's No.1 E Learning Website </p>
-		</div>
+		<!--slogan Div section-->
+			<div id="slog">
+				<p>Bangladesh's No.1 E Learning Website </p>
+			</div>
 
 	</div>
 
+	<!--Etechnical Section-->
 	<div id = "title">
-		<h2><a href="userlogin.php">eTechnical  School</a></h2>
+		<h2><a href="#">eTechnical  School</a></h2>
 	</div>
 
+	<!--Menubar-->
 	<div id = "menu">
 		<h2><i class="fas fa-bars"></i></h2>
 		<?php
@@ -32,6 +42,7 @@
 		?>
 	</div>
 
+	<!--search Div-->
 	<div id = "head_search">
 		<form method = "post" enctype="multipart/form-data">
 			<input type="search" name="query" placeholder="Search Course From Here"/>
@@ -39,16 +50,15 @@
 
 		</form>
 	</div>
-
+	
+<!--Cart Section-->
 	<div id = "head_cart">
 		<a href="cart.php"><i class="fas fa-shopping-cart"></i><span>0</span></a>
 	</div>
 
 <!--Head upload-->
 	<div id = "head_signup">
-
 				<h4><i class="fas fa-upload"></i>Upload</h4>
-
 	</div>
 
 	<!--User Profile-->
@@ -73,11 +83,3 @@
 </div>
 
 
-
-//Logout php code
-<?php
-if(isset($_POST['logout'])){
-	session_unset();
-	echo"<script>window.open('index.php','_self')</script>";
-}
- ?>
