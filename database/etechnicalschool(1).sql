@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 12, 2020 at 09:06 PM
+-- Generation Time: Jan 14, 2020 at 05:36 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.1.33
 
@@ -163,7 +163,8 @@ INSERT INTO `sub_cata` (`sub_cata_id`, `sub_cata_name`, `cata_id`) VALUES
 (30, 'Science', 13),
 (31, 'Digital Photography', 14),
 (32, 'Painting', 14),
-(33, 'Camera Guide', 14);
+(33, 'Camera Guide', 14),
+(39, 'WebWithPython', 8);
 
 -- --------------------------------------------------------
 
@@ -247,7 +248,8 @@ INSERT INTO `user` (`u_id`, `email`, `pass`, `firstname`, `lastname`, `phone`, `
 (17, 'hamidul@gamil.com', '12345', 'Hamidul', 'Islam', 43423423, 'user'),
 (18, 'mamun@gmail.com', '12345', 'Mamun', 'Biswash', 1211212454, 'user'),
 (19, 'tarik@gmail.com', '12345', 'Tarik', 'Isalm', 2147483647, 'user'),
-(20, 'akbar@gmail.com', '12', 'akbar', 'Hossain', 2147483647, 'user');
+(20, 'akbar@gmail.com', '12', 'akbar', 'Hossain', 2147483647, 'user'),
+(21, 'robiul@gmail.com', '12345', 'Robiul ', 'Islam', 232434234, 'user');
 
 --
 -- Indexes for dumped tables
@@ -333,7 +335,7 @@ ALTER TABLE `faqs`
 -- AUTO_INCREMENT for table `sub_cata`
 --
 ALTER TABLE `sub_cata`
-  MODIFY `sub_cata_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `sub_cata_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `term`
@@ -351,7 +353,7 @@ ALTER TABLE `upload`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `u_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `u_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
