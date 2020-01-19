@@ -32,7 +32,7 @@
 
 	<!--Etechnical Section-->
 	<div id = "title">
-		<h2><a href="#">eTechnical  School</a></h2>
+		<h2><a href="index.php">eTechnical  School</a></h2>
 	</div>
 
 	<!--Menubar-->
@@ -59,9 +59,12 @@
 
 <!--Head upload-->
 	<div id = "head_signup">
+<<<<<<< HEAD
 				<h4><i class="fas fa-upload"></i><a href="">Upload</a></h4>
+=======
+				<h4><i class="fas fa-upload"></i><a href='upload.php'>Upload</a></h4>
+>>>>>>> 42f81b1274da91c9d8c035e971302990939ce030
 	</div>
-
 	<!--User Profile-->
 		<div id = "head_login">
 				<h4><i class="far fa-user"></i>

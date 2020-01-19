@@ -73,6 +73,8 @@ body{
 
 #head_signup{width:10%;height:60px;float:left; color:#fff;}
 #head_signup h4{cursor:pointer;text-align:center;line-height:60px;}
+#head_signup h4 a{text-decoration: none;color: #fff;}
+
 
 #head_signup:hover form{visibility: visible; opacity: 1;}
 

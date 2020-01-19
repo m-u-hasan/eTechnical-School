@@ -134,4 +134,40 @@
 		</div>
 		";
 	}
+
+	function upload_function(){		
+		echo "
+		<div id='wrap'>
+			<div id ='cart'>
+				<form method='post'>
+					<table cellspacing='0'>				
+						<tr>
+							<td>Course Titel: <input type='text' name='c_title'></td>
+						</tr>
+						
+						<tr>
+							<td>Price: <input type='text' name='price'></td>
+						</tr>
+
+						<tr>
+							<td>Teacher Name : <input type='text' name='t_name'></td>
+						</tr>
+
+						<tr>
+							<td>Thumbsnail: <input type='file' name='thumbnail'></td>
+						</tr>
+
+						<tr>
+							<td>Video : <input type='file' name='video'></td>
+						</tr>
+						<td> <input type='submit' name='submit'></td>
+						<tr>
+					</table>
+
+					</form>
+
+			</div>
+		</div>
+		";
+	}
 ?>
