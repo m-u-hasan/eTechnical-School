@@ -13,7 +13,7 @@
 		?>
 		<div id='wrap'>
 			<?php
-		include("inc/inputform.php");
+		    include("inc/inputform.php");
 				include("inc/home_cat.php");
 				include("inc/top_course.php");
 				include("inc/footer.php");

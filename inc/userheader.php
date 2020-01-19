@@ -12,7 +12,7 @@
 
 <div id="header">
 		<div id="up_head">
-		
+
 		<!--eTechnicalsholl Section-->
 			<div id="link">
 				<?php 	echo head_link(); ?>
@@ -51,7 +51,7 @@
 
 		</form>
 	</div>
-	
+
 <!--Cart Section-->
 	<div id = "head_cart">
 		<a href="cart.php"><i class="fas fa-shopping-cart"></i><span>0</span></a>
@@ -59,13 +59,13 @@
 
 <!--Head upload-->
 	<div id = "head_signup">
-				<h4><i class="fas fa-upload"></i>Upload</h4>
+				<h4><i class="fas fa-upload"></i><a href="">Upload</a></h4>
 	</div>
 
 	<!--User Profile-->
 		<div id = "head_login">
 				<h4><i class="far fa-user"></i>
-				<?php 					
+				<?php
 					echo $_SESSION['name'];
 				?>
 		 </h4>
@@ -84,5 +84,3 @@
 			</form>
 		</div>
 </div>
-
-

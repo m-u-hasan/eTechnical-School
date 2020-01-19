@@ -4,7 +4,7 @@
 		if(isset($_POST['add_cata'])){
 			$cata_name = $_POST['cata_name'];
 				$cat_icon = $_POST['cat_icon'];
-
+				
 			$check = $con->prepare("select * from cata where cata_name='$cata_name'");
 			$check->setFetchMode(PDO::FETCH_ASSOC);
 			$check->execute();
@@ -33,7 +33,6 @@
 
 		function edit_cata(){
 		include("inc/db.php");
-
 		if(isset($_GET['edit_cata'])){
 			$id =$_GET['edit_cata'];
 			$get_cata = $con->prepare("select * from cata where cata_id = '$id'");
