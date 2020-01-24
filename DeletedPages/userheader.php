@@ -52,21 +52,21 @@
 		</form>
 	</div>
 	
-<!--Cart Section-->
+
+	<!--Cart Section-->
 	<div id = "head_cart">
 		<a href="cart.php"><i class="fas fa-shopping-cart"></i><span>0</span></a>
 	</div>
 
 <!--Head upload-->
-	<div id = "head_signup">
+	<div id = "head_signup">			
 				<h4><i class="fas fa-upload"></i><a href='upload.php'>Upload</a></h4>
 	</div>
+
+	
 	<!--User Profile-->
-		<div id = "head_login">
-				<h4><i class="far fa-user"></i>
-				<?php 					
-					echo $_SESSION['name'];
-				?>
+	<div id = "head_login">
+				<h4><i class="far fa-user"></i>			
 		 </h4>
 				<form method="post">
 							<div id="input_f">
@@ -82,6 +82,7 @@
 							</center>
 			</form>
 		</div>
+		
 </div>
 
 

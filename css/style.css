@@ -6,7 +6,7 @@ body{
 
 #header{top:0px;width:100%;height:90px;background:#3f5267;position:fixed;}
 
-#wrap{margin-top:90px;}
+#wrap{margin-top:0px;}
 
 #up_head{width:100%;height:30px;background:#74889e;}
 #link {width:33%;float:left;height:30px;}
@@ -46,20 +46,19 @@ body{
 #head_cart a span{font-size:16px;}
 
 
-#head_login:hover{background: #fff; color:#3f5267}
 #head_login{color: #fff; width:10%;height:60px;float:left; box-sizing:border-box;border-right:1px solid rgba(0,0,0,0.2);}
+#head_login:hover{background: #fff; color:#3f5267}
 #head_login h4{cursor:pointer;text-align:center; line-height:60px;}
 
 #head_login:hover form{visibility: visible; opacity: 1;}
-
 #head_login form{transition:all 0.3s ease-in-out; visibility: hidden; opacity: 0; padding: 2%; box-sizing: border-box; position: absolute; background:#fff; width: 30%; margin-left: -20%;}
 
 
 #head_login form h3{margin-bottom: 0%; border-radius:100%; width: 100px; height: 100px; background: #3f5267; text-align: center; color: #fff; line-height: 100px; font-size: 30px;}
-#head_login form h4{color:#3f5267; font-weight: normal; font-size: 30px;}
+#head_login form h4{color:#3f5267; font-weight: normal; font-size: 30px;line-height: 40px;margin-bottom: 5px;}
 #head_login form h5{font-weight: normal; color: #3f5267; margin: 4% 0% 6% 0%; font-size: 14px; float: right; cursor: pointer;}
 
-#head_login form center button{transition: all 0.3s ease-in-out; cursor: pointer; color: #fff; width: 100%; height: 35px; outline: none; border-width: 0px; background: #3f5267; border-radius: 30px;}
+#head_login form center button{transition: all 0.3s ease-in-out; cursor: pointer; color: #fff; width: 100%; height: 35px; outline: none; border-width: 0px; background: #3f5267; border-radius: 30px;margin-top: 7px;}
 #head_login form center button:hover{border-radius: 0px;}
 
 
@@ -67,13 +66,13 @@ body{
 #input_f input{background: none; outline:none; border-width: 0px;}
 #input_f i{width: 10%; color: #3f5267}
 
-
-
 #head_signup:hover{background: #fff; color:#3f5267}
 
 #head_signup{width:10%;height:60px;float:left; color:#fff;}
-#head_signup h4{cursor:pointer;text-align:center;line-height:60px;}
-#head_signup h4 a{text-decoration: none;color: #fff;}
+#head_signup h4{cursor:pointer;text-align:center;line-height:60px;color: #fff;display:inline-block;}
+#head_signup h4 a{text-decoration: none;color: #fff;line-height: 60px;margin-left: 15px;}
+#head_signup h4 a i{margin-right: 5px;}
+#head_signup h4 a:hover{color: #3f5267;}
 
 
 #head_signup:hover form{visibility: visible; opacity: 1;}
@@ -93,7 +92,7 @@ body{
 
 #cart_f{width: 60%;}
 #cart{width:96%;padding:2%;background:#fff;box-sizing:border-box;margin:2% 2% 1% 2%;}
-#cart table{width:100%;}
+#cart table{width:100%;margin-top: 20px;}
 #cart table tr th{text-align:left; padding-left:1%; ppadding-right: 4%; font-size: 20px; box-sizing:border-box;height:35px;background:#3d5267;color:#fff; ;}
 #cart table tr td{border-bottom: 2px solid rgba(0,0,0,0.2); padding:1% 0% 1% 0%;box-sizing:border-box; font-size: 20px;}
 #cart table tr td img {height:80px;width:150px;float:left;margin-right:2%;}
@@ -117,13 +116,10 @@ body{
 
 
 
-#slider{width:100%;height:500px;}
+#slider{width:100%;height:500px;box-sizing: border-box;margin-top: 90px;}
 #slider img{width:100%;height:500px;}
 
-
-
-
-<--Home-------------------->
+<!--Home-------------------->
 #home_cat { width:100%; padding: 3% 5% 5% 3%; }
 #home_cat h2 {font-size: 30px; text-align: center; color: #3f5267; font-weight: normal; margin-top: 2%}
 #home_cat ul {list-style-type: none; margin-top: 2%; margin-bottom: 3%; overflow-y: auto; height: 400px;}

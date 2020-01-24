@@ -1,9 +1,14 @@
+
 <!--Php code Section-->
 <?php 
 	include("function.php");
 	include("db.php");
 	session_start();
-?>	
+	$_SESSION['email'];
+	$_SESSION['pass'];
+?>
+
+
 
 <div id="header">
 	<!--This div is for date slogan and link-->
@@ -34,6 +39,7 @@
 		?>
 	</div>
 
+
 	<!--This div is for Search Box-->
 	<div id = "head_search">
 		<form method = "post" enctype="multipart/form-data">
@@ -47,108 +53,82 @@
 	<div id = "head_cart">
 		<a href="cart.php"><i class="fas fa-shopping-cart"></i><span>0</span></a>
 	</div>
-	<?php if(!isset($_SESSION['email'])){echo "
-					<!--head Login-->
-					<div id = 'head_login'>
-						<h4><i class='far fa-user'></i> Login</h4>
-						<form method='post' action='loginProcess.php'>
-							<center>
-							<h3><i class='fas fa-user'></i></h3>
-							<h4>Log In</h4>
-							</center>
-				
-							<div id='input_f'>
-								<i class='fas fa-envelope'></i>
-								<input type='text' name='u_email' placeholder='Enter User Email' title='Please enter your email' required />
-							</div>
-				
-							<div id='input_f'>
-								<i class='fas fa-lock'></i>
-								<input type='password' name='u_pass' placeholder='Enter User Password' title='Please enter your password' required  />
-							</div>
-				
-							 <h5>Forgot Password</h5><br clear='all'/>
-							 <center><button type='submit' name='login'>Login</button>
-							</center>
-						</form>
-					</div>
 
-
-					<!--Head SignUp-->
-	<div id = 'head_signup'>
-		<h4><i class='fas fa-user-plus'></i> SignUp</h4>
-		<form method='post' action='signupProcess.php' enctype='multipart/form-data'>
+	<!--head Login-->
+    <!--
+	<div id = "head_login">
+		<h4><i class="far fa-user"></i> Login</h4>
+		<form method="post">
 			<center>
-			<h3><i class='fas fa-user-plus'></i></h3>
+			<h3><i class="fas fa-user"></i></h3>
+			<h4>Log In</h4>
+			</center>
+
+			<div id="input_f">
+				<i class="fas fa-envelope"></i>
+				<input type="text" name="u_email" placeholder="Enter User Email" title="Please enter your email" required />
+			</div>
+
+			<div id="input_f">
+				<i class="fas fa-lock"></i>
+				<input type="password" name="u_pass" placeholder="Enter User Password" title="Please enter your password" required  />
+			</div>
+ 			<h5>Forgot Password</h5><br clear="all"/>
+ 			<center><button type="submit" name="login">Login</button>
+			</center>
+
+           
+        
+		</form>
+	</div>
+    -->
+
+
+    <!--Head SignUp-->
+    <!--
+	<div id = "head_signup">
+		<h4><i class="fas fa-user-plus"></i> SignUp</h4>
+		<form method="post" enctype="multipart/form-data">
+			<center>
+			<h3><i class="fas fa-user-plus"></i></h3>
 			<h4>Signup</h4>
 		</center>
-			<div id='input_f'>
-				<i class='fas fa-user'></i>
-				<input type='text' name='firstname' placeholder='First Name'/>
+			<div id="input_f">
+				<i class="fas fa-user"></i>
+				<input type="text" name="firstname" placeholder="First Name"/>
 			</div>
 
-			<div id='input_f'>
-				<i class='fas fa-user'></i>
-				<input type='text' name='lastname' placeholder='Last Nmae'/>
+			<div id="input_f">
+				<i class="fas fa-user"></i>
+				<input type="text" name="lastname" placeholder="Last Nmae"/>
 			</div>
-			<div id='input_f'>
-				<i class='fas fa-envelope'></i>
-				<input type='text' name='email' placeholder='Enter Your Email' title='Please enter your email' required />
+			<div id="input_f">
+				<i class="fas fa-envelope"></i>
+				<input type="text" name="email" placeholder="Enter Your Email" title="Please enter your email" required />
 			</div>
-			<div id='input_f'>
-				<i class='fas fa-phone'></i>
-				<input type='text' name='phone' placeholder='Enter Your Phone No.'/>
+			<div id="input_f">
+				<i class="fas fa-phone"></i>
+				<input type="text" name="phone" placeholder="Enter Your Phone No."/>
 			</div>
-			<div id='input_f'>
-				<i class='fas fa-lock'></i>
-				<input type='password' name='pass1' id='pass1' placeholder='Enter Your Password' required />
+			<div id="input_f">
+				<i class="fas fa-lock"></i>
+				<input type="password" name="pass1" id="pass1" placeholder="Enter Your Password" required />
 			</div>
-			<div id='input_f'>
-				<i class='fas fa-lock'></i>
-				<input type='password' name='pass2' id='pass2' placeholder='Re-Enter Your Password' title='Please re-enter your password' required />
+			<div id="input_f">
+				<i class="fas fa-lock"></i>
+				<input type="password" name="pass2" id="pass2" placeholder="Re-Enter Your Password" title="Please re-enter your password" required />
 			</div>
 		<center>
-			<button type='submit' name='signup'>SignUp</button>
+			<button type="submit" name="signup">SignUp</button>
 		</center>
-	</form>
+	 </form>
 	</div>
-		
-		";}else{
-			
-			?>
-<!--Head upload-->
-	<div id = "head_signup">			
-				<h4><a href='upload.php'><i class="fas fa-upload"></i>Upload</a></h4>
-	</div>
-
-	
-	<!--User Profile-->
-	<div id = "head_login">
-				<h4><i class="far fa-user"></i>	
-				<?php echo $_SESSION['firstname'];	?>	
-		 </h4>
-				<form method="post" action="logout.php" >
-							<div id="input_f">
-								<h4>
-									My Profile
-							 </h4>
-							</div>
-
-							<div id="input_f">
-								<h4>Setting</h4>
-							</div>
-				 			<center><input type="submit" name="logout" value="Logout" />
-							</center>
-			</form>"
-		</div>
-
-		<?php } ?>
-
+    -->
 </div>
 
-<?php
-/*
-if(isset($_POST['signup'])){
+<?php	
+/*	
+		if(isset($_POST['signup'])){
 			$firstname = $_POST['firstname'];
 			$lastname = $_POST['lastname'];
 			$email = $_POST['email'];
@@ -173,6 +153,9 @@ if(isset($_POST['signup'])){
 
 						if($add_user->execute()){
 							
+							$_SESSION['email']=$email;
+							$_SESSION['pass']=$pass1;
+							$_SESSION['name'] = $firstname;
 							if($_SESSION['email'] && $_SESSION['pass']){
 								echo"<script>alert('Registration successful')</script>";
 								echo "<script>location.href='userlogin.php'</script>";
@@ -195,10 +178,8 @@ if(isset($_POST['signup'])){
 				echo"<script>alert('Please enter all input')</script>";
 			}
 		}
-		*/
 
 		//login Function
-		/*
 		if(isset($_POST['login'])){			
 			$email =$_POST['u_email'];
 			$pass = $_POST['u_pass'];		
@@ -206,21 +187,6 @@ if(isset($_POST['signup'])){
 			$get_cata->setFetchMode(PDO::FETCH_ASSOC);
 			$get_cata->execute();
 			$row=$get_cata->fetch();
-			echo "into the login section";
-			print_r($row);
-			if($row)
-			{
-				$_SESSION['firstname'] = $row["firstname"];
-				$_SESSION['email'] = $row["email"];
-				$_SESSION['role'] = $row["role"];
-				echo "session start successfully";
-			}
-			else
-			{
-				// alert for login error
-			}
-			*/
-			/*
 			if($row['role']=='Admin')
 			{
 				if(!isset($_SESSION['email']) && !isset($_SESSION['pass']))
@@ -239,16 +205,15 @@ if(isset($_POST['signup'])){
 				if($row['role']=='user')
 				{
 					$_SESSION['name'] = $row['firstname'];		
-					//echo"<script>location.href='index.php'</script>";
-					echo "<script> alert('Login')</script>";
+					echo"<script>location.href='userlogin.php'</script>";
 				}
 				else{
 					echo "<script> alert('Password or Email is wrong')</script>";
 					echo"<script>window.open('index.php','_self')</script>";
-					
 				}
 
 			}
-			*/
-		
-	?>
+
+        }
+        */
+?>
