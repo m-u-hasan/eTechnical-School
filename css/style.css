@@ -91,7 +91,7 @@ body{
 
 
 #cart_f{width: 60%;}
-#cart{width:96%;padding:2%;background:#fff;box-sizing:border-box;margin:2% 2% 1% 2%;}
+#cart{width:96%;padding:2%;background:#fff;box-sizing:border-box;margin:5% 2% 1% 2%;}
 #cart table{width:100%;margin-top: 20px;}
 #cart table tr th{text-align:left; padding-left:1%; ppadding-right: 4%; font-size: 20px; box-sizing:border-box;height:35px;background:#3d5267;color:#fff; ;}
 #cart table tr td{border-bottom: 2px solid rgba(0,0,0,0.2); padding:1% 0% 1% 0%;box-sizing:border-box; font-size: 20px;}

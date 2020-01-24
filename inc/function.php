@@ -140,10 +140,27 @@
 		echo "
 		<div id='wrap'>
 			<div id ='cart'>
-				<form method='post'>
+				<form method='post' action='' enctype='multipart/form-data'>
 					<table cellspacing='0'>				
 						<tr>
-							<td>Course Titel: <input type='text' name='c_title'></td>
+							<td>Course Title: <input type='text' name='c_title'></td>
+						</tr>
+						
+						<tr>
+							<td>Category:
+								<select name='cata_id'>
+														<option>Select Category</option>";
+									include("inc/db.php");
+									$get_cat =$con->prepare("select * from cata");
+									$get_cat->setFetchMode(PDO::FETCH_ASSOC);
+									$get_cat->execute();
+									while($row=$get_cat->fetch()):
+									echo "
+										<option value='".$row['cata_id']."'>".$row['cata_name']."</option>
+									";
+									endwhile;
+									echo "</select>
+												</td>
 						</tr>
 						
 						<tr>
@@ -159,12 +176,13 @@
 						</tr>
 
 						<tr>
-							<td>Video : <input type='file' name='video'></td>
-						</tr>
-						<td> <input type='submit' name='submit'></td>
-						<tr>
-					</table>
+							<td>Course Outline Video : <input type='file' name='video'></td>
+						</tr>	
 
+						<tr>
+							<td> <input type='submit' name='submit' value='Submit'></td>
+						</tr>
+					</table>
 					</form>
 
 			</div>

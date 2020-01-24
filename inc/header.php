@@ -116,139 +116,25 @@
 		";}else{
 			
 			?>
-<!--Head upload-->
-	<div id = "head_signup">			
-				<h4><a href='upload.php'><i class="fas fa-upload"></i>Upload</a></h4>
-	</div>
+		<!--Head upload-->
+		<div id = "head_signup">			
+					<h4><a href='upload.php'><i class="fas fa-upload"></i>Upload</a></h4>
+		</div>
 
-	
-	<!--User Profile-->
-	<div id = "head_login">
-				<h4><i class="far fa-user"></i>	
-				<?php echo $_SESSION['firstname'];	?>	
-		 </h4>
+		<!--User Profile-->
+		<div id = "head_login">
+				<h4><i class="far fa-user"></i><?php echo $_SESSION['firstname'];?> </h4>
 				<form method="post" action="logout.php" >
 							<div id="input_f">
-								<h4>
-									My Profile
-							 </h4>
+								<h4>My Profile</h4>
 							</div>
 
 							<div id="input_f">
 								<h4>Setting</h4>
 							</div>
-				 			<center><input type="submit" name="logout" value="Logout" />
-							</center>
-			</form>"
+				 			<center><input type="submit" name="logout" value="Logout" /></center>
+				</form>"
 		</div>
 
 		<?php } ?>
-
 </div>
-
-<?php
-/*
-if(isset($_POST['signup'])){
-			$firstname = $_POST['firstname'];
-			$lastname = $_POST['lastname'];
-			$email = $_POST['email'];
-			$phone = $_POST['phone'];
-			$pass1 = $_POST['pass1'];
-			$pass2 = $_POST['pass2'];
-
-			if($email && $pass1 && $pass2){
-				if($pass1 == $pass2)
-				{
-				$check = $con->prepare("select * from user where email='$email'");
-				$check->setFetchMode(PDO::FETCH_ASSOC);
-				$check->execute();
-				$count = $check->rowCount();
-				if($count==1){
-						echo"<script>alert('Email Already Added try with another email')</script>";
-						echo"<script>window.open('index.php','_self')</script>";
-					}
-					else
-					{
-						$add_user = $con->prepare("insert into user(email,pass,firstname,lastname,phone)values('$email','$pass1','$firstname','$lastname','$phone')");
-
-						if($add_user->execute()){
-							
-							if($_SESSION['email'] && $_SESSION['pass']){
-								echo"<script>alert('Registration successful')</script>";
-								echo "<script>location.href='userlogin.php'</script>";
-							}							
-							//echo"<script>window.open('index.php','_self')</script>";-->
-						}
-						else{
-							echo"<script>alert('Registration Failed')</script>";
-							echo"<script>window.open('index.php','_self')</script>";
-						}
-					}
-
-				}
-				else
-				{
-					echo"<script>alert('Password does not match')</script>";
-				}
-			}
-			else{
-				echo"<script>alert('Please enter all input')</script>";
-			}
-		}
-		*/
-
-		//login Function
-		/*
-		if(isset($_POST['login'])){			
-			$email =$_POST['u_email'];
-			$pass = $_POST['u_pass'];		
-			$get_cata = $con->prepare("select * from user where email='$email' AND pass='$pass'");
-			$get_cata->setFetchMode(PDO::FETCH_ASSOC);
-			$get_cata->execute();
-			$row=$get_cata->fetch();
-			echo "into the login section";
-			print_r($row);
-			if($row)
-			{
-				$_SESSION['firstname'] = $row["firstname"];
-				$_SESSION['email'] = $row["email"];
-				$_SESSION['role'] = $row["role"];
-				echo "session start successfully";
-			}
-			else
-			{
-				// alert for login error
-			}
-			*/
-			/*
-			if($row['role']=='Admin')
-			{
-				if(!isset($_SESSION['email']) && !isset($_SESSION['pass']))
-				{
-					$_SESSION['email'] = $email;
-					$_SESSION['pass'] = $pass;
-					echo"<script>window.open('./admin/index.php','_self')</script>";
-				}else
-				{
-					echo"<script>window.open('./admin/index.php','_self')</script>";
-				}
-				
-			}
-			else
-			{
-				if($row['role']=='user')
-				{
-					$_SESSION['name'] = $row['firstname'];		
-					//echo"<script>location.href='index.php'</script>";
-					echo "<script> alert('Login')</script>";
-				}
-				else{
-					echo "<script> alert('Password or Email is wrong')</script>";
-					echo"<script>window.open('index.php','_self')</script>";
-					
-				}
-
-			}
-			*/
-		
-	?>
