@@ -10,7 +10,14 @@
 		<body>
 			<?php
 				include('inc/header.php');
-				include('inc/home_cat.php');
+			?>
+
+			<div id='allcourses'>
+				<ul>
+					<?php echo all_courses(); ?>
+				</ul>
+			</div>  
+			<?php
 				include('inc/footer.php');
 			?>
 		</body>

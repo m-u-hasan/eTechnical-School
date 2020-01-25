@@ -15,7 +15,6 @@
 
 			</ul>
 		";
-
 	}
 
 	function cat_menu(){
@@ -43,8 +42,7 @@
 				$get_home_cat_count = $con->prepare("select COUNT(cata_id) from upload where cata_id='$id'");
 				$get_home_cat_count->setFetchMode(PDO::FETCH_ASSOC);
 				$get_home_cat_count->execute();
-				$val = $get_home_cat_count->fetch();
-				//if($val){echo $val['COUNT(cata_id)'];}
+				$val = $get_home_cat_count->fetch();				
 			echo " 
 			  <li>
 				<a href='allcourses.php?category=$id'>
@@ -282,5 +280,44 @@
 
 	}
 
-?>
+	function all_courses($r_cata_id){
+		include("inc/db.php");
+		$get_upload = $con->prepare("select * from upload where cata_id='$r_cata_id'");
+		$get_upload->setFetchMode(PDO::FETCH_ASSOC);
+		$get_upload->execute();
+		while($row=$get_upload->fetch()):
+		  $id = $row['cata_id'];
+		  
+		$get_cata_name =$con->prepare("select * from cata where cata_id='$id'");
+		$get_cata_name->setFetchMode(PDO::FETCH_ASSOC);
+		$get_cata_name->execute();
+		$row1=$get_cata_name->fetch();
 
+
+		$get_cata_name =$con->prepare("select * from courses where course_id='$id'");
+		$get_cata_name->setFetchMode(PDO::FETCH_ASSOC);
+		$get_cata_name->execute();
+		$row2=$get_cata_name->rowCount();
+
+		  $count = $con->prepare("select COUNT(cata_id) from upload where cata_id='$id'");
+		  $count->setFetchMode(PDO::FETCH_ASSOC);
+		  $count->execute();
+		  $val = $count->fetch();
+		
+		echo " 
+		  <li>
+			<a href='#'>
+			  <img style='width: 100%; height: 150px;' src='".$row['image']."' alt='img not found'/>
+			  <h3>Title: ".$row['c_title']."</h3>
+			  <h4>Price: $".$row['price']."</h4>
+			  <p>Total Videos :  $row2 </p>
+			  <p>Category :  ".$row1['cata_name']."</p>
+			  <p>Teacher Name: ".$row['t_name']."</p>
+			</a>
+		  </li>
+		";
+		endwhile;
+
+	}
+
+?>

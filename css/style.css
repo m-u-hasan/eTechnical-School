@@ -128,6 +128,18 @@ body{
 #top_course ul li a p {color: #3f5267; margin-bottom: 5%;}
 #top_course ul li:hover { transform: scale(1.1)}
 
+<!--allcoursesView-->
+
+#allcourses {margin-top:10%; width:100%; padding: 3% 5% 5% 3%;height: 500px; }
+#allcourses h2 {font-size: 30px; text-align: center; color: #3f5267; font-weight: normal; margin-top: 2%}
+#top_course ul {list-style-type: none; margin-top: 2%; margin-bottom: 3%; overflow-y: auto; height: 500px;}
+#allcourses ul li {transition: all 0.3s ease-in-out; margin-left: 2%;  margin-bottom: 2%; width: 18%; height: 250px; background:#fff; float: left}
+#allcourses ul li a {text-decoration: none}
+#allcourses ul li a img{width: 5px; height: 150px;}
+#allcourses ul li a h3{color: #74889e; font-size: 14px; margin-top:3%; font-weight: 400px; margin-left: 8px;}
+#allcourses ul li a h4{margin-top: 4%; margin-bottom: 2%; color: #74889e }
+#allcourses ul li a p {color: #3f5267; margin-bottom: 5%;}
+
 
 <!--Footer Section-->
 #footerProblem{width:100%;height:0px;}
