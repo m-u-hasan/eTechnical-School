@@ -52,43 +52,30 @@ body{
 
 #head_login:hover form{visibility: visible; opacity: 1;}
 #head_login form{transition:all 0.3s ease-in-out; visibility: hidden; opacity: 0; padding: 2%; box-sizing: border-box; position: absolute; background:#fff; width: 30%; margin-left: -20%;}
-
-
 #head_login form h3{margin-bottom: 0%; border-radius:100%; width: 100px; height: 100px; background: #3f5267; text-align: center; color: #fff; line-height: 100px; font-size: 30px;}
 #head_login form h4{color:#3f5267; font-weight: normal; font-size: 30px;line-height: 40px;margin-bottom: 5px;}
 #head_login form h5{font-weight: normal; color: #3f5267; margin: 4% 0% 6% 0%; font-size: 14px; float: right; cursor: pointer;}
-
 #head_login form center button{transition: all 0.3s ease-in-out; cursor: pointer; color: #fff; width: 100%; height: 35px; outline: none; border-width: 0px; background: #3f5267; border-radius: 30px;margin-top: 7px;}
 #head_login form center button:hover{border-radius: 0px;}
-
 
 #input_f{padding-left: 2%; box-sizing: border-box;; width: 100%; border-bottom: 3px solid #74889e; height: 40px; line-height: 40px; margin-bottom: 2%;}
 #input_f input{background: none; outline:none; border-width: 0px;}
 #input_f i{width: 10%; color: #3f5267}
 
 #head_signup:hover{background: #fff; color:#3f5267}
-
 #head_signup{width:10%;height:60px;float:left; color:#fff;}
 #head_signup h4{cursor:pointer;text-align:center;line-height:60px;color: #fff;display:inline-block;}
 #head_signup h4 a{text-decoration: none;color: #fff;line-height: 60px;margin-left: 15px;}
 #head_signup h4 a i{margin-right: 5px;}
 #head_signup h4 a:hover{color: #3f5267;}
-
-
 #head_signup:hover form{visibility: visible; opacity: 1;}
-
 #head_signup form{transition:all 0.3s ease-in-out; visibility: hidden; opacity: 0; padding: 2%; box-sizing: border-box; position: absolute; background:#fff; width: 30%; margin-left: -20%;}
-
-
 #head_signup form h3{margin-bottom: 0%; border-radius:100%; width: 50px; height: 50px; background: #3f5267; text-align: center; color: #fff; line-height: 50px; font-size: 30px;}
 #head_signup form h4{color:#3f5267; font-weight: normal; font-size: 20px;}
 
-
 #head_signup form h5{font-weight: normal; color: #3f5267; margin: 4% 0% 6% 0%; font-size: 14px; float: right; cursor: pointer;}
-
 #head_signup form center button{transition: all 0.3s ease-in-out; cursor: pointer; color: #fff; width: 100%; height: 35px; outline: none; border-width: 0px; background: #3f5267; border-radius: 30px;}
 #head_signup form center button:hover{border-radius: 0px;}
-
 
 #cart_f{width: 60%;}
 #cart{width:96%;padding:2%;background:#fff;box-sizing:border-box;margin:5% 2% 1% 2%;}
@@ -103,18 +90,14 @@ body{
 #cart table tr td b a{text-decoration:none;color:#f00; }
 #cart table tr td b a:hover{text-decoration:underline;}
 #cart table tr td button{ transition: all 0.3s ease-in-out; width: 40%; height: 35px; background: #3f5267; border-width:0px; outline: none; color: #fff; border-radius: 30px; cursor: pointer;}
-
 #cart table tr td button a{display: block; text-decoration: none; color: #fff;}
 #cart table tr td button:hover{border-radius: 0px;}
-
 
 #crumb{width:96%;box-shadow:0px 0px 20px #ccc;height:35px;line-height:35px;padding:0% 1% 1% 1;background:#fff;box-sizing:border-box;margin:0% 2.5% 2% 2%;}
 #crumb span{color:#74889e;margin-right:0.2%;margin-left:0.5%;}
 #crumb span a{text-decoration:none;color:#06f;}
 #crumb span a:hover{text-decoration:underline;}
 #crumb b{color:#74889e;font-weight:normal;}
-
-
 
 #slider{width:100%;height:500px;box-sizing: border-box;margin-top: 90px;}
 #slider img{width:100%;height:500px;}
@@ -123,49 +106,31 @@ body{
 #home_cat { width:100%; padding: 3% 5% 5% 3%; }
 #home_cat h2 {font-size: 30px; text-align: center; color: #3f5267; font-weight: normal; margin-top: 2%}
 #home_cat ul {list-style-type: none; margin-top: 2%; margin-bottom: 3%; overflow-y: auto; height: 400px;}
-
-#home_cat ul li {transition: all 0.3s ease-in-out; margin-left: 2%;  margin-bottom: 2%; width: 18%; height: 200px; background:#fff; float: left}
-
+#home_cat ul li {transition: all 0.3s ease-in-out; margin-left: 2%;  margin-bottom: 2%; width: 18%; height: 300px; background:#fff; float: left}
 #home_cat ul li a {text-decoration: none}
 #home_cat ul li a i {text-align: center; color:#3f5267; font-size: 60px; margin-top: 20%; margin-bottom: 2%; padding-bottom: }
-
 #home_cat ul li a h4{margin-top: 4%; margin-bottom: 2%; color: #74889e }
 #home_cat ul li a p {color: #3f5267; margin-bottom: 15%;}
-
 #home_cat ul li:hover{background: #3f5267; border-radius: 100%;}
 #home_cat ul li:hover i{color: #74889e}
 #home_cat ul li:hover h4{color: #ffff};
 #home_cat ul li:hover p{color: #74889e};
 
-
-
-<!--top--course-->
-#top_course {margin-top:-4%; width:100%; padding: 0% 5% 5% 3%; box-sizing: border-box }
-#top_course h2 {font-size: 30px; text-align: center; color: #3f5267; font-weight: normal;}
-
-#top_course ul{list-style-type: none; margin-top: 3%}
-#top_course ul li {transition: all 0.3s ease-in-out; margin-left: 2% ; margin-bottom: 2%; width: 17.5%; margin height: 270px; background:#fff; float: left}
-
-
+<!--Top Courses-->
+#top_course {margin-top:-4%; width:100%; padding: 3% 5% 5% 3%; }
+#top_course h2 {font-size: 30px; text-align: center; color: #3f5267; font-weight: normal; margin-top: 2%}
+#top_course ul {list-style-type: none; margin-top: 2%; margin-bottom: 3%; overflow-y: auto; height: 270px;}
+#top_course ul li {transition: all 0.3s ease-in-out; margin-left: 2%;  margin-bottom: 2%; width: 18%; height: 250px; background:#fff; float: left}
 #top_course ul li a {text-decoration: none}
 #top_course ul li a img{width: 5px; height: 150px;}
-
 #top_course ul li a h3{color: #74889e; font-size: 14px; margin-top:3%; font-weight: 400px; margin-left: 8px;}
-
-#top_course ul li a h4{margin-top: 4%; margin-bottom: 4%;  color: #3f5267; font-size: 18px; font-weight: normal; margin-left: 8px; }
-
-
-#top_course ul li a h5{color: #74889e; font-weight: normal; margin-left: 8px;}
-
+#top_course ul li a h4{margin-top: 4%; margin-bottom: 2%; color: #74889e }
+#top_course ul li a p {color: #3f5267; margin-bottom: 5%;}
 #top_course ul li:hover { transform: scale(1.1)}
 
 
-
-
 <!--Footer Section-->
-
 #footerProblem{width:100%;height:0px;}
-
 #footer{width:100%;padding:3% 5% 5% 5%;box-sizing:border-box;background:#3f5267;}
 #footer ul{list-style-type:none;}
 #footer ul li{width:33%;float:left;padding-right:5%;box-sizing:border-box;}
@@ -175,12 +140,10 @@ body{
 #footer ul li table td{padding-bottom:5%;color:#74889e;}
 #footer ul li table td:nth-child(1){width:10%;}
 #footer ul li table tr td i{margin-right:5%;color:#1DA1F2;}
-
 #footer ul li textarea{resize:none;width:100%;height:100px;background:#74889e;border-radius:3px;padding:3%;box-sizing:border-box;margin-bottom:5px;font-size:14px;outline:none;border-width:0px;}
 #f_input textarea::webkit-input-placeholder{color: #0bf;!important}
 #footer ul li button{width:40%;height:30px;border-radius:3px;float:right;background:#74889e;border-width:0px;outline:none;color:#fff;cursor:pointer;}
 #footer ul li button:hover{background:#fff;color:#3f5267;}
-
 #f_input{border-radius:3px;font-size:14px;padding-left:5px;width:100%;height:30px;background:#74889e;margin-bottom:5px;}
 #f_input i{width:10%;color:#3f5267;text-align:center;}
 #f_input input{border-width:0px;background:none;outline:none;height:30px;width:88%;}

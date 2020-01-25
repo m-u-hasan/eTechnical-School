@@ -123,7 +123,7 @@
 
 		<!--User Profile-->
 		<div id = "head_login">
-				<h4><i class="far fa-user"></i><?php echo $_SESSION['firstname'];?> </h4>
+				<h4><i class="far fa-user"></i><?php echo$_SESSION['firstname'];?> </h4>
 				<form method="post" action="logout.php" >
 							<div id="input_f">
 								<h4>My Profile</h4>
