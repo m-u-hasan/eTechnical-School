@@ -22,7 +22,9 @@ if(isset($_POST['Logout']))
 	<div id = "link">
 		<h3>
 			<!--<a href="">Logout</a>-->
-			<input type='submit' name='Logout' value='Logout'>
+			<form action="logout.php" method="post">
+			<input type='submit' name='logout' value='Logout'>
+			</form>
 		</h3>	
 	</div>
 	

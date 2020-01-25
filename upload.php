@@ -2,16 +2,29 @@
 	include('inc/db.php');
 	if(isset($_POST['submit']))
 	{
+		$cata_id = $_POST['cata_id'];
 		$c_title = $_POST['c_title'];
 		$price = $_POST['price'];
 		$t_name = $_POST['t_name'];
-		$image = $_POST['thumbnail'];
-		$video = $_POST['video'];
+		$image = $_FILES['thumbnail']['name'];
+		$ext = end(explode(".",$image));
+		$image = md5(rand()).'.'.$ext;
+		$path = "upload/image/".$image;
+		$video = $_FILES['video']['name'];
+		$ext1 = end(explode(".",$video));
+		$video = md5(rand()).'.'.$ext1;
+		$path1 = "upload/video/".$video;
 		
-		$add_user = $con->prepare("insert into upload(c_title,price,t_name,image,video)values('$c_title','$price','$t_name','$image','$video')");
+		$add_user = $con->prepare("insert into upload(cata_id,c_title,price,t_name,image,video)values('$cata_id','$c_title','$price','$t_name','$image','$video')");
 			if($add_user->execute()){
+				move_uploaded_file($_FILES['thumbnail']['tmp_name'],$path);
+				move_uploaded_file($_FILES['video']['tmp_name'],$path1);
 				echo"<script>alert('Upload successful')</script>";
-				//echo"<script>window.open('../userlogin.php','_self')</script>";
+				echo"<script>window.open('index.php','_self')</script>";
+				}
+				else
+				{
+					echo"<script>alert('Upload failed')</script>";
 				}
 
 	}

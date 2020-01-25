@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+*{margin:0px;padding:0px;font-family: 'Ubuntu', sans-serif;}
+body{
+		background:#e6e6e6;
+}
+#header{top:0px;width:100%;height:90px;background:#3f5267;position:fixed;}
+#wrap{margin-top:0px;}
+#up_head{width:100%;height:30px;background:#74889e;}
+#link {width:33%;float:left;height:30px;}
+#link ul{list-style:none;margin-left:20%;}
+#link ul li{float:left;padding-left:2%;padding-right:2%;box-sizing:border-box;}
+#link ul li a{text-decoration:none;line-height:30px;color:#fff;font-size:12px;}
+#date {width:33%;float:left;height:30px;}
+#date p{color:#fff;font-size:14px;line-height:30px;text-align:center;}
+#slog {width:34%;float:left;height:30px;}
+#slog p{color:#fff; font-size:14px;line-height:30px;text-align:right;margin-right:20%;}
+
+#title{width:20%;height:60px;float:left;box-sizing:border-box;border-right:1px solid rgba(0,0,0,0.2);}
+#title h2 a {text-align:center; margin-left: 8%}
+#title h2 a {text-decoration:none;color:#fff;text-shadow:4px 4px 4px #000;line-height:60px;font-weight:normal;}
+
+#menu {color:#fff; width:5%;height:60px;float:left;box-sizing:border-box;border-right:1px solid rgba(0,0,0,0.2);}
+#menu h2{text-align:center;line-height:60px;cursor:pointer;}
+#menu:hover{background: #fff; color:#3f5267}
+
+#menu:hover ul{visibility: visible; opacity: 1}
+
+#menu ul { transition: all 0.3s ease-in-out; visibility: hidden; opacity: 0; ppadding-top: 1%; box-sizing: border-box; list-style-type: none; position: absolute;background: #fff; width: 20%;  }
+#menu ul li{  box-sizing:border-box;transition:all 0.3s ease-in-out; border-left: 4px solid #fff; width: 100%; height: 40px; font-size: 14px;  line-height: 30px;  color: #3f5267; }
+#menu ul li a{transition:all 0.3s ease-in-out; display: block; text-decoration: none;  }
+#menu ul li a i{width: 15%; text-align: center;}
+#menu ul li:hover{background: #74889e; border-left:4px solid #3f5267;}
+#menu ul li:hover a{color: #fff; padding-left: 5%; box-sizing:border-box;}
+
+
+#head_search{width:50%;height:60px;float:left; padding-left:1.7%;box-sizing:border-box;box-sizing:border-box;border-right:1px solid rgba(0,0,0,0.2);}
+#head_search form input{border-width:0px;  border-top-left-radius: 30px; border-bottom-left-radius: 30px;padding-left:5px;box-sizing:border-box;margin-top:2%;width:90%;height:35px;background:#fff;outline:none;}
+#head_search form button{cursor: pointer;border-width:0px;margin-left:-2%;border-top-right-radius: 30px; border-bottom-right-radius: 30px;box-sizing:border-box;margin-top:2%;width:8%;height:35px;background:#fff;outline:none;}
+#head_search form button:hover{background: #e6e6e6;}
+
+#head_cart{text-align:center;width:5%;height:60px;float:left;box-sizing:border-box;border-right:1px solid rgba(0,0,0,0.2);}
+#head_cart a{text-decoration:none;color:#fff;font-size:24px;line-height:60px;}
+#head_cart a span{font-size:16px;}
+
+
+#head_login:hover{background: #fff; color:#3f5267}
+#head_login{color: #fff; width:10%;height:60px;float:left; box-sizing:border-box;border-right:1px solid rgba(0,0,0,0.2);}
+#head_login h4{cursor:pointer;text-align:center; line-height:60px;}
+
+#head_login:hover form{visibility: visible; opacity: 1;}
+
+#head_login form{transition:all 0.3s ease-in-out; visibility: hidden; opacity: 0; padding: 2%; box-sizing: border-box; position: absolute; background:#fff; width: 20%; margin-left: -10%;}
+
+
+#head_login form h3{margin-bottom: 0%; border-radius:100%; width: 100px; height: 100px; background: #3f5267; text-align: center; color: #fff; line-height: 100px; font-size: 30px;}
+#head_login form h4{margin-bottom: 5px; color:#3f5267; font-weight: normal; font-size: 18px; padding-bottom:2px;line-height: 40px;}
+#head_login form h5{font-weight: normal; color: #3f5267; margin: 4% 0% 6% 0%; font-size: 14px; float: right; cursor: pointer;}
+
+#head_login form center button{transition: all 0.3s ease-in-out; cursor: pointer; color: #fff; width: 100%; height: 35px; outline: none; border-width: 0px; background: #3f5267; border-radius: 30px;}
+#head_login form center button:hover{border-radius: 0px;}
+
+
+#input_f{padding-left: 2%; box-sizing: border-box;; width: 100%; border-bottom: 3px solid #74889e; height: 40px; line-height: 40px; margin-bottom: 2%;}
+#input_f input{background: none; outline:none; border-width: 0px;}
+#input_f i{width: 10%; color: #3f5267}
+
+
+
+#head_signup:hover{background: #fff; color:#3f5267}
+
+#head_signup{width:10%;height:60px;float:left; color:#fff;}
+#head_signup h4{cursor:pointer;text-align:center;line-height:60px;}
+#head_signup h4 a{margin-left:5px; text-decoration: none; color: #fff;display: inline-block;}
+#head_signup h4 a:hover{color:#3d5267;}
+
+#head_signup:hover form{visibility: visible; opacity: 1;}
+
+#head_signup form{transition:all 0.3s ease-in-out; visibility: hidden; opacity: 0; padding: 2%; box-sizing: border-box; position: absolute; background:#fff; width: 30%; margin-left: -20%;}
+
+
+#head_signup form h3{margin-bottom: 0%; border-radius:100%; width: 100px; height: 100px; background: #3f5267; text-align: center; color: #fff; line-height: 100px; font-size: 30px;}
+#head_signup form h4{color:#3f5267; font-weight: normal; font-size: 30px;}
+#head_signup form h5{font-weight: normal; color: #3f5267; margin: 4% 0% 6% 0%; font-size: 14px; float: right; cursor: pointer;}
+
+#head_signup form center button{transition: all 0.3s ease-in-out; cursor: pointer; color: #fff; width: 100%; height: 35px; outline: none; border-width: 0px; background: #3f5267; border-radius: 30px;}
+#head_signup form center button:hover{border-radius: 0px;}
+
+
+#cart_f{width: 60%;}
+#cart{width:96%;padding:2%;background:#fff;box-sizing:border-box;margin:2% 2% 1% 2%;}
+#cart table{width:100%;margin-top: 10px;}
+#cart table tr th{text-align:left; padding-left:1%; ppadding-right: 4%; font-size: 20px; box-sizing:border-box;height:35px;background:#3d5267;color:#fff; ;}
+#cart table tr td{border-bottom: 2px solid rgba(0,0,0,0.2); padding:1% 0% 1% 0%;box-sizing:border-box; font-size: 20px;}
+#cart table tr td img {height:80px;width:150px;float:left;margin-right:2%;}
+#cart table tr td span{float:left; width:88%;}
+#cart table tr td span a{text-decoration:none; color:#3f5267; font-size:30px;}
+#cart table tr td span a:hover{text-decoration:underline;}
+#cart table tr td b{font-weight:normal; font-size:20px; float: left; margin-top: 2%; margin-right: 200px;}
+#cart table tr td b a{text-decoration:none;color:#f00; }
+#cart table tr td b a:hover{text-decoration:underline;}
+#cart table tr td button{ transition: all 0.3s ease-in-out; width: 40%; height: 35px; background: #3f5267; border-width:0px; outline: none; color: #fff; border-radius: 30px; cursor: pointer;}
+
+#cart table tr td button a{display: block; text-decoration: none; color: #fff;}
+#cart table tr td button:hover{border-radius: 0px;}
+
+
+#crumb{width:96%;box-shadow:0px 0px 20px #ccc;height:35px;line-height:35px;padding:0% 1% 1% 1;background:#fff;box-sizing:border-box;margin:0% 2.5% 2% 2%;}
+#crumb span{color:#74889e;margin-right:0.2%;margin-left:0.5%;}
+#crumb span a{text-decoration:none;color:#06f;}
+#crumb span a:hover{text-decoration:underline;}
+#crumb b{color:#74889e;font-weight:normal;}
+
+
+
+#slider{width:100%;height:500px;box-sizing: border-box;}
+#slider img{width:100%;height:500px;margin-top: 90px;}
+
+
+
+
+
+#home_cat { width:100%; padding: 3% 5% 5% 3%; }
+#home_cat h2 {font-size: 30px; text-align: center; color: #3f5267; font-weight: normal; margin-top: 2%}
+#home_cat ul {list-style-type: none; margin-top: 2%; margin-bottom: 3%; overflow-y: auto; height: 400px;}
+
+#home_cat ul li {transition: all 0.3s ease-in-out; margin-left: 2%;  margin-bottom: 2%; width: 18%; height: 200px; background:#fff; float: left}
+
+#home_cat ul li a {text-decoration: none}
+#home_cat ul li a i {text-align: center; color:#3f5267; font-size: 60px; margin-top: 20%; margin-bottom: 2%; padding-bottom: }
+
+#home_cat ul li a h4{margin-top: 4%; margin-bottom: 2%; color: #74889e }
+#home_cat ul li a p {color: #3f5267; margin-bottom: 15%;}
+
+#home_cat ul li:hover{background: #3f5267; border-radius: 100%;}
+#home_cat ul li:hover i{color: #74889e}
+#home_cat ul li:hover h4{color: #ffff};
+#home_cat ul li:hover p{color: #74889e};
+
+
+
+<!--top--course-->
+#top_course {margin-top:-4%; width:100%; padding: 0% 5% 5% 3%; box-sizing: border-box }
+#top_course h2 {font-size: 30px; text-align: center; color: #3f5267; font-weight: normal;}
+
+#top_course ul{list-style-type: none; margin-top: 3%}
+#top_course ul li {transition: all 0.3s ease-in-out; margin-left: 2% ; margin-bottom: 2%; width: 17.5%; margin height: 270px; background:#fff; float: left}
+
+
+#top_course ul li a {text-decoration: none}
+#top_course ul li a img{width: 5px; height: 150px;}
+
+#top_course ul li a h3{color: #74889e; font-size: 14px; margin-top:3%; font-weight: 400px; margin-left: 8px;}
+
+#top_course ul li a h4{margin-top: 4%; margin-bottom: 4%;  color: #3f5267; font-size: 18px; font-weight: normal; margin-left: 8px; }
+
+
+#top_course ul li a h5{color: #74889e; font-weight: normal; margin-left: 8px;}
+
+#top_course ul li:hover { transform: scale(1.1)}
+
+
+
+
+<!--Footer Section-->
+
+#footerProblem{width:100%;height:0px;}
+
+#footer{width:100%;padding:3% 5% 5% 5%;box-sizing:border-box;background:#3f5267;}
+#footer ul{list-style-type:none;}
+#footer ul li{width:33%;float:left;padding-right:5%;box-sizing:border-box;}
+#footer ul li h2{color:#fff;font-weight:normal;margin-bottom:10%;}
+#footer ul li p{color:#74889e;line-height:20px;font-weight:normal;}
+#footer ul li table{width:100%;margin-bottom:5%;}
+#footer ul li table td{padding-bottom:5%;color:#74889e;}
+#footer ul li table td:nth-child(1){width:10%;}
+#footer ul li table tr td i{margin-right:5%;color:#1DA1F2;}
+
+#footer ul li textarea{resize:none;width:100%;height:100px;background:#74889e;border-radius:3px;padding:3%;box-sizing:border-box;margin-bottom:5px;font-size:14px;outline:none;border-width:0px;}
+#f_input textarea::webkit-input-placeholder{color: #0bf;!important}
+#footer ul li button{width:40%;height:30px;border-radius:3px;float:right;background:#74889e;border-width:0px;outline:none;color:#fff;cursor:pointer;}
+#footer ul li button:hover{background:#fff;color:#3f5267;}
+
+#f_input{border-radius:3px;font-size:14px;padding-left:5px;width:100%;height:30px;background:#74889e;margin-bottom:5px;}
+#f_input i{width:10%;color:#3f5267;text-align:center;}
+#f_input input{border-width:0px;background:none;outline:none;height:30px;width:88%;}
+#f_input input::webkit-input-placeholder{color: #0bf;!important}

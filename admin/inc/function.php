@@ -3,8 +3,12 @@
 		include("inc/db.php");
 		if(isset($_POST['add_cata'])){
 			$cata_name = $_POST['cata_name'];
+<<<<<<< HEAD
+			$cat_icon = $_POST['cat_icon'];
+=======
 				$cat_icon = $_POST['cat_icon'];
 				
+>>>>>>> 44ef82c92b82ffb5de79b9415206fe56cb5e8c1f
 			$check = $con->prepare("select * from cata where cata_name='$cata_name'");
 			$check->setFetchMode(PDO::FETCH_ASSOC);
 			$check->execute();
@@ -15,7 +19,7 @@
 				echo "<script>window.open('index.php?cata','_self')</script>";
 			}else{
 					$add_cata = $con->prepare("insert into cata(cata_name,cat_icon)values('$cata_name','$cat_icon')");
-					if($add_cata->execute()){
+					if($add_cata->execute()){					
 					echo "<script>alert('Category Added Successfully')</script>";
 					echo "<script>window.open('index.php?cata','_self')</script>";
 				}
@@ -44,11 +48,7 @@
 			echo"<h3>Edit Categories</h3>
 			<form  id ='edit_form' method = 'post' enctype='multipart/form-data'>
 				<input type='text' name='cata_name' value='".$row['cata_name']."' placeholder='Enter Category Name '/>
-
-	<input type='text' name='cat_icon' value='".$row['cat_icon']."' placeholder='Enter Category icon '/>
-
-
-
+				<input type='text' name='cat_icon' value='".$row['cat_icon']."' placeholder='Enter Category icon '/>				
 				<center><button name = 'edit_cata'>Edit Category</button></center>
 			</form>
 			";

@@ -38,17 +38,21 @@
 		$get_home_cat->setFetchMode(PDO::FETCH_ASSOC);
 		$get_home_cat->execute();
 		while($row = $get_home_cat->fetch()):
-			echo "
-			<li>
-				<a href='#'>
+				$id = $row["cata_id"];
+				$get_home_cat_count = $con->prepare("select COUNT(cata_id) from upload where cata_id='$id'");
+				$get_home_cat_count->setFetchMode(PDO::FETCH_ASSOC);
+				$get_home_cat_count->execute();
+				$val = $get_home_cat_count->fetch();				
+			echo " 
+			  <li>
+				<a href='allcourses.php?category=$id'>
 				<center>
-	      ".$row['cat_icon']."
-				<h4>".$row['cata_name']." </h4>
-				<p>2</p>
+				".$row['cat_icon']."
+				<h4>".$row['cata_name']."</h4>
+				<p>Total Courses : ".$val['COUNT(cata_id)']."</p>
 				</center>
 				</a>
-			</li>
-			";
+			</li>";
 		endwhile;
 
 	}
@@ -139,10 +143,27 @@
 		echo "
 		<div id='wrap'>
 			<div id ='cart'>
-				<form method='post'>
+				<form method='post' action='' enctype='multipart/form-data'>
 					<table cellspacing='0'>				
 						<tr>
-							<td>Course Titel: <input type='text' name='c_title'></td>
+							<td>Course Title: <input type='text' name='c_title'></td>
+						</tr>
+						
+						<tr>
+							<td>Category:
+								<select name='cata_id'>
+														<option>Select Category</option>";
+									include("inc/db.php");
+									$get_cat =$con->prepare("select * from cata");
+									$get_cat->setFetchMode(PDO::FETCH_ASSOC);
+									$get_cat->execute();
+									while($row=$get_cat->fetch()):
+									echo "
+										<option value='".$row['cata_id']."'>".$row['cata_name']."</option>
+									";
+									endwhile;
+									echo "</select>
+												</td>
 						</tr>
 						
 						<tr>
@@ -158,16 +179,145 @@
 						</tr>
 
 						<tr>
-							<td>Video : <input type='file' name='video'></td>
-						</tr>
-						<td> <input type='submit' name='submit'></td>
-						<tr>
-					</table>
+							<td>Course Outline Video : <input type='file' name='video'></td>
+						</tr>	
 
+						<tr>
+							<td> <input type='submit' name='submit' value='Submit'></td><td><a href='video_upload.php'>Next</a></td>
+						</tr>
+					</table>
 					</form>
 
 			</div>
 		</div>
 		";
 	}
+
+	function Video_upload_function(){		
+		echo "
+		<div id='wrap'>
+			<div id ='cart'>
+				<form method='post' action='' enctype='multipart/form-data'>
+					<table cellspacing='0'>	
+						<tr>
+							<td>Category:
+								<select name='course_id'>
+														<option>Select Category</option>";
+									include("inc/db.php");
+									$get_cat =$con->prepare("select * from upload");
+									$get_cat->setFetchMode(PDO::FETCH_ASSOC);
+									$get_cat->execute();
+									while($row=$get_cat->fetch()):
+									echo "
+										<option value='".$row['id']."'>".$row['c_title']."</option>
+									";
+									endwhile;
+									echo "</select>
+							</td>
+						</tr>
+
+						<tr>
+							<td>Video Title: <input type='text' name='video_title'></td>
+						</tr>
+
+						<tr>
+							<td>Thumbsnail: <input type='file' name='thumbnail'></td>
+						</tr>
+
+						<tr>
+							<td> Video : <input type='file' name='video'></td>
+						</tr>	
+						
+						<tr>
+							<td> <input type='submit' name='submit' value='Submit'></td>
+						</tr>
+					</table>
+					</form>
+
+			</div>
+		</div>
+		";
+	}
+
+	function top_courses(){
+		include("inc/db.php");
+		$get_upload = $con->prepare("select * from upload");
+		$get_upload->setFetchMode(PDO::FETCH_ASSOC);
+		$get_upload->execute();
+		while($row=$get_upload->fetch()):
+		  $id = $row['cata_id'];
+
+
+		$get_cata_name =$con->prepare("select * from cata where cata_id='$id'");
+		$get_cata_name->setFetchMode(PDO::FETCH_ASSOC);
+		$get_cata_name->execute();
+		$row1=$get_cata_name->fetch();
+
+
+		$get_cata_name =$con->prepare("select * from courses where course_id='$id'");
+		$get_cata_name->setFetchMode(PDO::FETCH_ASSOC);
+		$get_cata_name->execute();
+		$row2=$get_cata_name->rowCount();
+
+		  $count = $con->prepare("select COUNT(cata_id) from upload where cata_id='$id'");
+		  $count->setFetchMode(PDO::FETCH_ASSOC);
+		  $count->execute();
+		  $val = $count->fetch();
+		
+		echo " 
+		  <li>
+			<a href='#'>
+			  <img style='width: 100%; height: 150px;' src='".$row['image']."' alt='img not found'/>
+			  <h3>Title: ".$row['c_title']."</h3>
+			  <h4>Price: $".$row['price']."</h4>
+			  <p>Total Videos :  $row2 </p>
+			  <p>Category :  ".$row1['cata_name']."</p>
+			  <p>Teacher Name: ".$row['t_name']."</p>
+			</a>
+		  </li>
+		";
+		endwhile;
+
+	}
+
+	function all_courses($r_cata_id){
+		include("inc/db.php");
+		$get_upload = $con->prepare("select * from upload where cata_id='$r_cata_id'");
+		$get_upload->setFetchMode(PDO::FETCH_ASSOC);
+		$get_upload->execute();
+		while($row=$get_upload->fetch()):
+		  $id = $row['cata_id'];
+		  
+		$get_cata_name =$con->prepare("select * from cata where cata_id='$id'");
+		$get_cata_name->setFetchMode(PDO::FETCH_ASSOC);
+		$get_cata_name->execute();
+		$row1=$get_cata_name->fetch();
+
+
+		$get_cata_name =$con->prepare("select * from courses where course_id='$id'");
+		$get_cata_name->setFetchMode(PDO::FETCH_ASSOC);
+		$get_cata_name->execute();
+		$row2=$get_cata_name->rowCount();
+
+		  $count = $con->prepare("select COUNT(cata_id) from upload where cata_id='$id'");
+		  $count->setFetchMode(PDO::FETCH_ASSOC);
+		  $count->execute();
+		  $val = $count->fetch();
+		
+		echo " 
+		  <li>
+			<a href='#'>
+			  <img style='width: 100%; height: 150px;' src='".$row['image']."' alt='img not found'/>
+			  <h3>Title: ".$row['c_title']."</h3>
+			  <h4>Price: $".$row['price']."</h4>
+			  <p>Total Videos :  $row2 </p>
+			  <p>Category :  ".$row1['cata_name']."</p>
+			  <p>Teacher Name: ".$row['t_name']."</p>
+			</a>
+		  </li>
+		";
+		endwhile;
+
+	}
+
 ?>
