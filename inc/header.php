@@ -1,6 +1,6 @@
 
 <!--Php code Section-->
-<?php 
+<?php
 	include("function.php");
 	include("db.php");
 	session_start();
@@ -30,7 +30,7 @@
 	<div id = "title">
 		<h2><a href="index.php">eTechnical  School</a></h2>
 	</div>
-	
+
 	<!--This is for Menubar-->
 	<div id = "menu">
 		<h2><i class="fas fa-bars"></i></h2>
@@ -48,6 +48,7 @@
 
 		</form>
 	</div>
+
 
 	<!--This is Cart Section-->
 	<div id = "head_cart">
@@ -121,7 +122,7 @@
 </div>
 
 //signup Function
-<?php		
+<?php
 		if(isset($_POST['signup'])){
 			$firstname = $_POST['firstname'];
 			$lastname = $_POST['lastname'];
@@ -146,14 +147,14 @@
 						$add_user = $con->prepare("insert into user(email,pass,firstname,lastname,phone)values('$email','$pass1','$firstname','$lastname','$phone')");
 
 						if($add_user->execute()){
-							
+
 							$_SESSION['email']=$email;
 							$_SESSION['pass']=$pass1;
 							$_SESSION['name'] = $firstname;
 							if($_SESSION['email'] && $_SESSION['pass']){
 								echo"<script>alert('Registration successful')</script>";
 								echo "<script>location.href='userlogin.php'</script>";
-							}							
+							}
 							//echo"<script>window.open('index.php','_self')</script>";-->
 						}
 						else{
@@ -174,9 +175,9 @@
 		}
 
 		//login Function
-		if(isset($_POST['login'])){			
+		if(isset($_POST['login'])){
 			$email =$_POST['u_email'];
-			$pass = $_POST['u_pass'];		
+			$pass = $_POST['u_pass'];
 			$get_cata = $con->prepare("select * from user where email='$email' AND pass='$pass'");
 			$get_cata->setFetchMode(PDO::FETCH_ASSOC);
 			$get_cata->execute();
@@ -192,13 +193,13 @@
 				{
 					echo"<script>window.open('./admin/index.php','_self')</script>";
 				}
-				
+
 			}
 			else
 			{
 				if($row['role']=='user')
 				{
-					$_SESSION['name'] = $row['firstname'];		
+					$_SESSION['name'] = $row['firstname'];
 					echo"<script>location.href='userlogin.php'</script>";
 				}
 				else{
